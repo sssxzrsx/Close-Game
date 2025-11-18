@@ -1,0 +1,119 @@
+.register-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background-color: #000;
+}
+
+.register-box {
+    background-color: #181818;
+    border-radius: 12px;
+    padding: 2.5rem 2.5rem; /* чуть меньше слева, чтобы всё выровнялось */
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    text-align: center;     /* центрируем заголовок и кнопку */
+    box-sizing: border-box; /* защита от вылезания содержимого */
+    margin: 0 auto;         /* центрирование блока */
+}
+
+.register-title {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 1.8rem;
+    letter-spacing: 1px;
+}
+
+.register-form {
+    text-align: left; /* чтобы инпуты выровнялись чётко под лейблом */
+    width: 100%;
+}
+
+.register-form .form-group {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"] {
+    width: 100%;                /* ✅ ширина по контейнеру */
+    padding: 0.7rem;
+    border-radius: 8px;
+    border: 2px solid #8DA8CF;
+    background-color: #111;
+    color: #fff;
+    font-size: 0.95rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;     /* ✅ чтобы паддинги не толкали поле вправо */
+}
+
+.register-form input::placeholder {
+    color: #bcbcbc;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+.register-form input:focus {
+    outline: none;
+    border-color: #A8BFE0;
+    box-shadow: 0 0 5px #A8BFE0;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    color: #ddd;
+    font-size: 0.8rem;
+    margin: 1rem 0 1.4rem;
+}
+
+.checkbox-label a {
+    color: #d2a94b;
+    text-decoration: none;
+}
+
+.checkbox-label a:hover {
+    text-decoration: underline;
+}
+
+.checkbox-label a:visited {
+    color: #d2a94b;
+}
+
+.btn-register {
+    width: 100%;
+    background-color: #8DA8CF;
+    color: #fff;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-register:hover {
+    background-color: #7b96c0;
+    transform: scale(1.03);
+}
+
+.text-small {
+    color: #ccc;
+    text-align: center;
+    margin-top: 0.8rem;
+}
+
+.text-small a {
+    color: #8DA8CF;
+    text-decoration: none;
+}
+
+.text-small a:hover {
+    text-decoration: underline;
+}

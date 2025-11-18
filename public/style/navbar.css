@@ -46,10 +46,28 @@
     text-decoration: none;
     font-weight: 500;
     letter-spacing: 0.05rem;
+    position: relative;
+    transition: color 0.3s;
 }
 
 .navbar-links a:hover {
-    text-decoration: underline;
+    color: #8DA8CF;
+}
+
+.navbar-links a.active {
+    color: #8DA8CF;
+    font-weight: 600;
+}
+
+.navbar-links a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: #8DA8CF;
+    border-radius: 4px;
 }
 
 .navbar-actions {
@@ -75,4 +93,35 @@
     color: #fff;
     font-size: 1.2rem;
 }
+.logout-form {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 0.6rem;
+}
 
+.btn-logout {
+    background-color: transparent;
+    border: 1px solid #8DA8CF;
+    color: #8DA8CF;
+    padding: 0.35rem 0.9rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: #8DA8CF;
+    color: #fff;
+}
+
+.btn-logout:active {
+    transform: scale(0.98);
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}

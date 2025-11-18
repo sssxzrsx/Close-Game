@@ -1,20 +1,48 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
+@extends('layouts.app')
 
-    <link rel="stylesheet" href="{{ asset('style/navbar.css') }}">
-    <link rel="stylesheet" href="{{ asset('style/auth.css') }}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+@section('title', 'Регистрация')
 
-    @stack('style')
-</head>
-<body>
-    @include('layouts.navbar')
-</body>
-</html>
+@push('style')
+    <link rel="stylesheet" href="{{ asset('css/register.css') }}">
+@endpush
+
+@section('content')
+<section class="register-section">
+    <div class="register-box">
+        <h2 class="register-title">РЕГИСТРАЦИЯ</h2>
+
+        <form method="POST" action="{{ route('register') }}" class="register-form">
+            @csrf
+
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Логин" required>
+            </div>
+
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Почта" required>
+            </div>
+
+            <div class="form-group">
+                <input type="password" name="password" placeholder="Пароль" required>
+            </div>
+
+            <div class="form-group">
+                <input type="password" name="password_confirmation" placeholder="Повторите пароль" required>
+            </div>
+
+            <label class="checkbox-label">
+                <input type="checkbox" name="accept_rules" required>
+                <span>Я принимаю <a href="#">правила пользования сайтом</a> и
+                    <a href="#">политику обработки персональных данных</a></span>
+            </label>
+
+            <button type="submit" class="btn-register">Регистрация</button>
+
+            <p class="text-small">
+                Уже зарегистрированы?
+                <a href="{{ route('login.form') }}">Войти</a>
+            </p>
+        </form>
+    </div>
+</section>
+@endsection
