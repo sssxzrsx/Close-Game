@@ -66,6 +66,8 @@
     width: 100%;
     border-radius: 10px;
     transition: filter 0.3s;
+    height: 300px;
+    object-fit: cover;
 }
 
 .game-card:hover img {

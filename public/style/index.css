@@ -30,7 +30,9 @@
 }
 
 .slide {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     min-width: 100%;
     overflow: hidden;
     width: 100%;
