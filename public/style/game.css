@@ -1,0 +1,119 @@
+.game-page {
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    padding: 3rem 4rem;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.game-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.game-cover {
+    width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.game-info {
+    max-width: 600px;
+}
+
+.game-title {
+    font-size: 1.8rem;
+    color: #8DA8CF;
+    margin-bottom: 1rem;
+}
+
+.price-block {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.price {
+    color: #fff;
+    font-weight: 600;
+}
+
+.old-price {
+    color: #777;
+    text-decoration: line-through;
+    margin-left: 0.6rem;
+}
+
+.game-category {
+    color: #A8BFE0;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.game-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #ddd;
+    margin-bottom: 1.5rem;
+    white-space: pre-line;
+}
+
+.btn-buy {
+    display: inline-block;
+    background-color: transparent;
+    border: 2px solid #8DA8CF;
+    color: #8DA8CF;
+    padding: 0.6rem 1.5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-buy:hover {
+    background-color: #8DA8CF;
+    color: #fff;
+}
+
+.related-games {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.related-games h2 {
+    color: #aebede;
+    margin-bottom: 1.5rem;
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+.related-card {
+    width: 160px;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.3s;
+    border-radius: 10px;
+}
+
+.related-card img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.related-card:hover img {
+    filter: brightness(70%);
+    transform: scale(1.03);
+}
+
+.related-card p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}

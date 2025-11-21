@@ -1,0 +1,140 @@
+.admin-section {
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    padding: 3rem 4rem;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.admin-section h1 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #8da8cf;
+}
+
+.admin-card {
+    background-color: #181818;
+    border: 1px solid #262626;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.admin-card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.4rem;
+    color: #aebede;
+}
+
+.admin-form input[type="text"],
+.admin-form input[type="number"],
+.admin-form input[type="file"],
+.admin-form textarea,
+.admin-form select {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #8da8cf;
+    border-radius: 8px;
+    background-color: #111;
+    color: #fff;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.admin-form input:focus,
+.admin-form textarea:focus,
+.admin-form select:focus {
+    border-color: #a8bfe0;
+    outline: none;
+    box-shadow: 0 0 6px #8da8cf;
+}
+
+.btn-admin {
+    background-color: #8da8cf;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-admin:hover {
+    background-color: #7b96c0;
+    transform: scale(1.05);
+}
+
+.btn-delete {
+    background-color: transparent;
+    border: 1px solid #ff6666;
+    color: #ff6666;
+    border-radius: 8px;
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-delete:hover {
+    background-color: #ff6666;
+    color: #fff;
+}
+
+.admin-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.admin-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    border: 1px solid #262626;
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    margin-bottom: 0.6rem;
+}
+
+.admin-list li span {
+    font-weight: 500;
+}
+
+.admin-game-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-game-item img {
+    width: 60px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 1rem;
+}
+
+.alert-success {
+    background-color: rgba(141, 168, 207, 0.15);
+    border: 1px solid #8da8cf;
+    color: #8da8cf;
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.admin-divider {
+    height: 1px;
+    background-color: #333;
+    margin: 2.5rem 0;
+}

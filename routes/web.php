@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
@@ -31,3 +33,22 @@ Route::middleware(['auth', 'admin'])->group(function () {
 });
 
 Route::get('/catalog', [ProductController::class, 'index'])->name('catalog');
+Route::get('/catalog', [ProductController::class, 'index'])->name('catalog');
+Route::get('/catalog/{game}', [ProductController::class, 'show'])->name('catalog.show');
+
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+
+    Route::post('/admin/categories', [AdminController::class, 'storeCategory'])->name('admin.categories.store');
+    Route::delete('/admin/categories/{category}', [AdminController::class, 'deleteCategory'])->name('admin.categories.delete');
+
+    Route::post('/admin/games', [AdminController::class, 'storeGame'])->name('admin.games.store');
+    Route::delete('/admin/games/{game}', [AdminController::class, 'deleteGame'])->name('admin.games.delete');
+});
+
+Route::middleware('auth')->group(function () {
+    Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+    Route::post('/cart/add/{game}', [CartController::class, 'add'])->name('cart.add');
+    Route::delete('/cart/remove/{item}', [CartController::class, 'remove'])->name('cart.remove');
+    Route::delete('/cart/clear', [CartController::class, 'clear'])->name('cart.clear');
+});

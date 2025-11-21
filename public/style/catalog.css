@@ -1,0 +1,200 @@
+.catalog-section {
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    padding: 2rem 4rem;
+    font-family: "Segoe UI", sans-serif;
+    text-align: center;
+}
+
+.catalog-title {
+    font-size: 1.6rem;
+    color: #8DA8CF;
+    margin-bottom: 2rem;
+}
+
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.category-item {
+    padding: 0.5rem 1rem;
+    border: 1px solid #8DA8CF;
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.category-item:hover {
+    background-color: #8DA8CF;
+    color: #fff;
+}
+
+.category-item.active {
+    background-color: #8DA8CF;
+    color: #fff;
+    font-weight: 600;
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.game-card {
+    position: relative;
+    width: 220px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.game-image {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.game-image img {
+    width: 100%;
+    border-radius: 10px;
+    transition: filter 0.3s;
+}
+
+.game-card:hover img {
+    filter: brightness(50%);
+}
+
+.game-card:hover {
+    box-shadow: 0 0 0 2px #8DA8CF;
+    border-radius: 10px;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.game-card:hover .overlay {
+    opacity: 1;
+}
+
+.game-card form {
+    margin: 0;
+}
+
+.btn-buy {
+    background-color: transparent;
+    border: 2px solid #8DA8CF;
+    color: #8DA8CF;
+    padding: 0.4rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.btn-buy:hover {
+    background-color: #8DA8CF;
+    color: #fff;
+}
+
+.price-tag {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 0.2rem 0.6rem;
+    border-radius: 10px;
+    font-size: 0.85rem;
+}
+
+.price-tag .old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 4px;
+    font-size: 0.75rem;
+}
+
+.game-title {
+    color: #fff;
+    font-size: 0.9rem;
+    margin-top: 0.7rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.text-empty {
+    color: #888;
+    font-size: 1rem;
+    margin: 2rem 0;
+}
+
+.game-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.game-card:visited {
+    color: inherit;
+}
+
+.game-card .game-title,
+.game-card .price-tag,
+.game-card .price,
+.game-card .old-price {
+    color: inherit;
+}
+
+.game-card:hover {
+    color: #fff;
+}
+
+.game-card.discounted {
+    box-shadow: 0 0 0 2px #ffbf00;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.game-card.discounted:hover {
+    box-shadow: 0 0 10px #ffbf00;
+}
+
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffbf00;
+    color: #000;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+}
+
+.game-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+.game-link:visited {
+    color: inherit;
+}

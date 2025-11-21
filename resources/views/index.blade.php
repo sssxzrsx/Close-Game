@@ -11,12 +11,10 @@
                 <img src="{{ asset('images/battlefield6.png') }}" alt="BATTLEFIELD 6">
                 <a href="#" class="btn-more">Подробнее</a>
             </div>
-
             <div class="slide">
                 <img src="{{ asset('images/helldivers2.png') }}" alt="HELLDIVERS 2">
                 <a href="#" class="btn-more">Подробнее</a>
             </div>
-
             <div class="slide">
                 <img src="{{ asset('images/forza5.png') }}" alt="Forza Horizen 5">
                 <a href="#" class="btn-more">Подробнее</a>

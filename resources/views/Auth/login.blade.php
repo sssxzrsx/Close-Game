@@ -9,7 +9,7 @@
 @section('content')
 <section class="login-section">
     <div class="login-box">
-        <h2 class="login-title">Вход</h2>
+        <h2 class="login-title">ВХОД</h2>
 
         <form method="POST" action="{{ route('login') }}" class="login-form">
             @csrf
