@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ticket;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Game;
@@ -11,9 +12,10 @@ class AdminController extends Controller
 {
     public function dashboard()
     {
-        $games = Game::with('category')->latest()->get();
         $categories = Category::all();
-        return view('admin.dashboard', compact('games', 'categories'));
+        $games = Game::with('category')->latest()->get();
+        $tickets = Ticket::with('user')->latest()->get();
+        return view('admin.dashboard', compact('categories', 'games', 'tickets'));
     }
 
     public function storeCategory(Request $request)

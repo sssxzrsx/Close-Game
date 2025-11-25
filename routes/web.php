@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SupportController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -52,3 +53,20 @@ Route::middleware('auth')->group(function () {
     Route::delete('/cart/remove/{item}', [CartController::class, 'remove'])->name('cart.remove');
     Route::delete('/cart/clear', [CartController::class, 'clear'])->name('cart.clear');
 });
+
+Route::view('/support', 'support')->name('support');
+Route::post('/support/send', function (Request $request) {
+    return back()->with('success', 'Ваше сообщение отправлено!');
+})->name('support.send');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/support', [SupportController::class, 'index'])->name('support');
+    Route::post('/support/send', [SupportController::class, 'store'])->name('support.send');
+});
+
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/admin/tickets', [SupportController::class, 'adminIndex'])->name('admin.tickets');
+    Route::post('/admin/tickets/{ticket}/answer', [SupportController::class, 'answer'])->name('admin.tickets.answer');
+});
+
+Route::delete('/admin/tickets/{ticket}/delete', [SupportController::class, 'delete'])->name('admin.tickets.delete');

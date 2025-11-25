@@ -44,14 +44,14 @@
 
 .catalog-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 3rem;
     justify-items: center;
 }
 
 .game-card {
     position: relative;
-    width: 220px;
+    width: 260px;
     text-align: center;
     transition: all 0.3s ease;
 }
@@ -66,7 +66,7 @@
     width: 100%;
     border-radius: 10px;
     transition: filter 0.3s;
-    height: 300px;
+    height: 360px;
     object-fit: cover;
 }
 
@@ -101,7 +101,7 @@
     background-color: transparent;
     border: 2px solid #8DA8CF;
     color: #8DA8CF;
-    padding: 0.4rem 1.2rem;
+    padding: 1rem 2rem;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;

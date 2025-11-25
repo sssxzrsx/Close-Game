@@ -12,7 +12,7 @@
     text-align: center;
     color: #8da8cf;
 }
-
+ф
 .admin-card {
     background-color: #181818;
     border: 1px solid #262626;
@@ -137,4 +137,135 @@
     height: 1px;
     background-color: #333;
     margin: 2.5rem 0;
+}
+
+.ticket-block {
+    background-color: #0e0e0e;
+    border: 1px solid #1f1f1f;
+    border-radius: 10px;
+    padding: 1.2rem 1.6rem;
+    margin-bottom: 1.4rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s, transform 0.2s;
+}
+.ticket-block:hover {
+    background-color: #131313;
+    transform: scale(1.01);
+}
+
+.ticket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.8rem;
+    border-bottom: 1px solid #222;
+    padding-bottom: 0.5rem;
+}
+
+.ticket-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.ticket-user {
+    font-weight: 600;
+    color: #8DA8CF;
+    font-size: 1rem;
+}
+
+.ticket-email {
+    color: #aaa;
+    font-size: 0.8rem;
+}
+
+.ticket-date {
+    color: #888;
+    font-size: 0.8rem;
+}
+
+.ticket-message {
+    color: #fff;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 1rem 0 1.2rem 0;
+    background-color: #111;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    border-left: 3px solid #8DA8CF;
+}
+
+.ticket-answer {
+    background-color: rgba(141,168,207,0.1);
+    border-left: 3px solid #8DA8CF;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    color: #bcd0f0;
+    margin-bottom: 1rem;
+}
+
+.answer-label {
+    color: #8DA8CF;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.ticket-form textarea {
+    width: 100%;
+    min-height: 80px;
+    background-color: #0d0d0d;
+    border: 1px solid #8DA8CF;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.9rem;
+    padding: 0.6rem 0.9rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    margin-bottom: 0.7rem;
+}
+.ticket-form textarea:focus {
+    border-color: #A8BFE0;
+    box-shadow: 0 0 8px #8DA8CF;
+    outline: none;
+}
+
+.ticket-status-bar {
+    text-align: right;
+}
+
+.ticket-status-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.25rem 0.7rem;
+    border-radius: 6px;
+    color: #000;
+    letter-spacing: 0.5px;
+}
+
+.btn-delete {
+    background-color: transparent;
+    border: 1px solid #ff4d4d;
+    color: #ff4d4d;
+    border-radius: 8px;
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-delete:hover {
+    background-color: #ff4d4d;
+    color: #fff;
+}
+
+.ticket-status-label.open { background-color: #ffbf00; color: #000; }
+.ticket-status-label.answered { background-color: #8DA8CF; color: #000; }
+.ticket-status-label.closed { background-color: #666; color: #fff; }
+
+@media (max-width: 768px) {
+    .ticket-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
 }

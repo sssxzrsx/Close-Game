@@ -23,8 +23,8 @@
         <div class="footer-social">
             <p>НАШИ СОЦ-СЕТИ:</p>
             <div class="footer-social-icons">
-                <a href="#"><i class="fab fa-telegram"></i></a>
-                <a href="#"><i class="fab fa-vk"></i></a>
+                <a href="https://web.telegram.org/a/"><i class="fab fa-telegram"></i></a>
+                <a href="https://vk.com/"><i class="fab fa-vk"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
         </div>

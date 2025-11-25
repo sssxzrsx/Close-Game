@@ -10,7 +10,7 @@
             <li><a href="{{ route('catalog') }}" class="{{ request()->routeIs('catalog') ? 'active' : '' }}">КАТАЛОГ</a></li>
             <li><a href="#" class="{{ request()->is('about') ? 'active' : '' }}">О НАС</a></li>
             <li><a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'active' : '' }}">ГЛАВНАЯ</a></li>
-            <li><a href="#" class="{{ request()->is('support') ? 'active' : '' }}">ПОДДЕРЖКА</a></li>
+            <li><a href="{{ route('support') }}" class="{{ request()->is('support') ? 'active' : '' }}">ПОДДЕРЖКА</a></li>
 
             @auth
                 @if(Auth::user()->is_admin)
