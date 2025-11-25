@@ -12,8 +12,17 @@
     <link rel="stylesheet" href="{{ asset('style/login.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="{{ asset('fontawesome/css/all.min.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const toggle = document.getElementById("menuToggle");
+        const menu = document.getElementById("navbarMenu");
+        toggle.addEventListener("click", () => {
+            menu.classList.toggle("open");
+        });
+    });
+    </script>
 
     @stack('style')
 </head>

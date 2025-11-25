@@ -1,0 +1,108 @@
+.payment-section {
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    padding: 3rem 1.5rem;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.payment-container {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.payment-title {
+    color: #8DA8CF;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.payment-subtitle {
+    color: #bbb;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.payment-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.payment-option {
+    flex: 1 1 45%;
+    background-color: #111;
+    border: 1px solid #1f1f1f;
+    border-radius: 10px;
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    color: #fff;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.payment-option i {
+    font-size: 1.3rem;
+    color: #8DA8CF;
+}
+
+.payment-option input {
+    display: none;
+}
+
+.payment-option:hover {
+    transform: translateY(-4px);
+}
+
+.payment-option input:checked + i,
+.payment-option input:checked + span,
+.payment-option:has(input:checked) {
+    color: #8DA8CF;
+    border-color: #8DA8CF;
+}
+
+/* Кнопки */
+.btn-pay-submit {
+    background-color: #8DA8CF;
+    border: none;
+    color: #fff;
+    padding: 0.8rem 1.6rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.btn-pay-submit:hover {
+    background-color: #7b96c0;
+    transform: scale(1.05);
+}
+
+.btn-back {
+    display: inline-block;
+    color: #8DA8CF;
+    text-decoration: none;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+.btn-back:hover {
+    text-decoration: underline;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+    .payment-option {
+        flex: 1 1 100%;
+    }
+
+    .btn-pay-submit {
+        width: 90%;
+    }
+}

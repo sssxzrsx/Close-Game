@@ -172,3 +172,69 @@
     justify-content: center;
     text-decoration: none;
 }
+
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    .navbar-container {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 1rem;
+        margin-top: 1rem;
+        padding: 1rem 0;
+        border-top: 1px solid #222;
+    }
+
+    .navbar-links.open {
+        display: flex;
+        animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .navbar-actions {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .navbar-logo img {
+        height: 28px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-actions {
+        flex-direction: column;
+    }
+
+    .btn-auth, .btn-logout {
+        width: 90%;
+        text-align: center;
+    }
+}

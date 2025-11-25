@@ -6,17 +6,21 @@
             </a>
         </div>
 
-        <ul class="navbar-links">
+        <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <ul class="navbar-links" id="navbarMenu">
             <li><a href="{{ route('catalog') }}" class="{{ request()->routeIs('catalog') ? 'active' : '' }}">КАТАЛОГ</a></li>
-            <li><a href="#" class="{{ request()->is('about') ? 'active' : '' }}">О НАС</a></li>
+            <li><a href="{{ route('about') }}" class="{{ request()->routeIs('about') ? 'active' : '' }}">О НАС</a></li>
             <li><a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'active' : '' }}">ГЛАВНАЯ</a></li>
-            <li><a href="{{ route('support') }}" class="{{ request()->is('support') ? 'active' : '' }}">ПОДДЕРЖКА</a></li>
+            <li><a href="{{ route('support') }}" class="{{ request()->routeIs('support') ? 'active' : '' }}">ПОДДЕРЖКА</a></li>
 
             @auth
                 @if(Auth::user()->is_admin)
                     <li>
                         <a href="{{ route('admin.dashboard') }}" class="{{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
-                            <i class="fa fa-cog"></i> РЕДАКТИРОВАНИЕ
+                            <i class="fa-solid fa-gear"></i> РЕДАКТИРОВАНИЕ
                         </a>
                     </li>
                 @endif
@@ -36,22 +40,22 @@
                     </form>
                 </div>
             @endguest
+
             <div class="cart-wrapper">
                 <a href="{{ route('cart.index') }}" class="cart-icon">
-                    <i class="fa fa-shopping-cart"></i>
+                    <i class="fa-solid fa-shopping-cart"></i>
                 </a>
-
-            @auth
-                @php
-                    $cartItemsCount = \App\Models\Cart::where('user_id', Auth::id())
+                @auth
+                    @php
+                        $cartItemsCount = \App\Models\Cart::where('user_id', Auth::id())
                             ->withCount('items')
                             ->first()->items_count ?? 0;
-                @endphp
-                @if($cartItemsCount > 0)
-                    <span class="cart-count">{{ $cartItemsCount }}</span>
-                @endif
-            @endauth
-</div>
+                    @endphp
+                    @if($cartItemsCount > 0)
+                        <span class="cart-count">{{ $cartItemsCount }}</span>
+                    @endif
+                @endauth
+            </div>
         </div>
     </div>
 </nav>

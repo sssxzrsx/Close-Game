@@ -44,7 +44,7 @@
         <div class="cart-footer">
             <div class="cart-total">Итого: <strong>{{ $total }}₽</strong></div>
             <div class="cart-actions">
-                <button class="btn-pay">ОПЛАТИТЬ</button>
+                <a href="{{ route('payment.show') }}" class="btn-pay">ОПЛАТИТЬ</a>
                 <form action="{{ route('cart.clear') }}" method="POST">
                     @csrf
                     @method('DELETE')

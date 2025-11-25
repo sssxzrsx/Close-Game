@@ -3,36 +3,27 @@
 @section('title', 'Авторизация')
 
 @push('style')
-<link rel="stylesheet" href="{{ asset('css/login.css') }}">
+<link rel="stylesheet" href="{{ asset('style/auth.css') }}">
 @endpush
 
 @section('content')
-<section class="login-section">
-    <div class="login-box">
-        <h2 class="login-title">ВХОД</h2>
+<section class="auth-section">
+    <div class="auth-box">
+        <h2 class="auth-title">Вход</h2>
 
-        <form method="POST" action="{{ route('login') }}" class="login-form">
+        <form method="POST" action="{{ route('login') }}" class="auth-form">
             @csrf
-
-            <div class="form-group">
-                <input type="text" name="name" placeholder="Логин" required autofocus>
-            </div>
-
-            <div class="form-group">
-                <input type="password" name="password" placeholder="Пароль" required>
-            </div>
+            <input type="text" name="name" placeholder="Логин" required autofocus>
+            <input type="password" name="password" placeholder="Пароль" required>
 
             <label class="checkbox-label">
                 <input type="checkbox" name="remember">
-                <span>Запомнить меня</span>
+                Запомнить меня
             </label>
 
-            <button type="submit" class="btn-login">Войти</button>
+            <button type="submit" class="btn-auth">Войти</button>
 
-            <p class="text-small">
-                Нет аккаунта?
-                <a href="{{ route('register.form') }}">Зарегистрироваться</a>
-            </p>
+            <p class="auth-link">Нет аккаунта? <a href="{{ route('register.form') }}">Регистрация</a></p>
         </form>
     </div>
 </section>

@@ -27,7 +27,17 @@
                     <div class="ticket-item">
                         <div class="ticket-header">
                             <span class="ticket-date">{{ $ticket->created_at->format('d.m.Y H:i') }}</span>
-                            <span class="ticket-status {{ $ticket->status }}">{{ strtoupper($ticket->status) }}</span>
+                                @php
+                                    $statusText = match ($ticket->status) {
+                                        'open' => 'Открыто',
+                                        'answered' => 'Закрыто',
+                                        default => ucfirst($ticket->status),
+                                    };
+                                @endphp
+
+                                <span class="ticket-status {{ $ticket->status }}">
+                                    {{ $statusText }}
+                                </span>
                         </div>
                         <p class="ticket-message">{{ $ticket->message }}</p>
                         @if($ticket->answer)

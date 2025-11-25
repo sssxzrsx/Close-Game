@@ -6,22 +6,29 @@
     font-family: "Segoe UI", sans-serif;
 }
 
-.game-header {
+.game-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
-    align-items: flex-start;
     justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 3rem;
 }
 
-.game-cover {
-    width: 320px;
+.game-image {
+    flex: 1 1 350px;
+    max-width: 400px;
+}
+.game-image img {
+    width: 100%;
     border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    object-fit: cover;
 }
 
 .game-info {
-    max-width: 600px;
+    flex: 1 1 400px;
+    max-width: 550px;
 }
 
 .game-title {
@@ -31,25 +38,27 @@
 }
 
 .price-block {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 1rem;
 }
-
 .price {
-    color: #fff;
     font-weight: 600;
+    margin-right: 0.5rem;
 }
-
 .old-price {
-    color: #777;
+    color: #888;
     text-decoration: line-through;
-    margin-left: 0.6rem;
+    font-size: 1rem;
 }
 
 .game-category {
-    color: #A8BFE0;
     font-size: 0.9rem;
+    color: #A8BFE0;
     margin-bottom: 1rem;
+}
+.game-category span {
+    color: #fff;
+    margin-left: 0.4rem;
 }
 
 .game-description {
@@ -62,58 +71,118 @@
 
 .btn-buy {
     display: inline-block;
-    background-color: transparent;
-    border: 2px solid #8DA8CF;
-    color: #8DA8CF;
-    padding: 0.6rem 1.5rem;
+    background-color: #8DA8CF;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
     border-radius: 10px;
     text-decoration: none;
     font-weight: 600;
-    transition: all 0.3s;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%;
+    max-width: 250px;
 }
-
 .btn-buy:hover {
-    background-color: #8DA8CF;
-    color: #fff;
+    background-color: #7b96c0;
+    transform: scale(1.03);
 }
 
 .related-games {
-    margin-top: 3rem;
     text-align: center;
+    margin-top: 4rem;
 }
-
 .related-games h2 {
-    color: #aebede;
+    color: #A8BFE0;
     margin-bottom: 1.5rem;
+    font-size: 1.3rem;
 }
-
 .related-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 1.5rem;
-    justify-items: center;
 }
-
 .related-card {
-    width: 160px;
     text-decoration: none;
     color: #fff;
-    transition: transform 0.3s;
-    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
-
 .related-card img {
     width: 100%;
+    height: 200px;
+    object-fit: cover;
     border-radius: 10px;
-    transition: transform 0.3s, filter 0.3s;
+    margin-bottom: 0.5rem;
+}
+.related-card:hover {
+    transform: translateY(-4px);
 }
 
-.related-card:hover img {
-    filter: brightness(70%);
-    transform: scale(1.03);
+@media (max-width: 992px) {
+    .game-page {
+        padding: 2rem;
+    }
+    .game-container {
+        gap: 1.5rem;
+    }
+    .game-title {
+        font-size: 1.6rem;
+    }
+    .game-description {
+        font-size: 0.9rem;
+    }
 }
 
-.related-card p {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
+@media (max-width: 768px) {
+    .game-page {
+        padding: 1.5rem;
+    }
+
+    .game-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .game-image, .game-info {
+        max-width: 100%;
+        flex: 1 1 auto;
+    }
+
+    .game-image img {
+        max-height: 350px;
+        object-fit: cover;
+    }
+
+    .price-block {
+        font-size: 1.1rem;
+    }
+
+    .btn-buy {
+        width: 80%;
+        max-width: none;
+        font-size: 1rem;
+        padding: 0.8rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-page {
+        padding: 1rem;
+    }
+
+    .game-title {
+        font-size: 1.4rem;
+    }
+
+    .btn-buy {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 0.6rem 0;
+    }
+
+    .related-card img {
+        height: 160px;
+    }
 }

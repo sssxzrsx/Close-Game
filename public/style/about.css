@@ -1,0 +1,98 @@
+.about-section {
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    padding: 3rem 1.5rem;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-title {
+    font-size: 1.8rem;
+    color: #8DA8CF;
+    margin-bottom: 1rem;
+    letter-spacing: 0.8px;
+}
+
+.about-subtitle {
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+}
+
+.about-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.about-card {
+    background-color: #111;
+    border-radius: 12px;
+    border: 1px solid #1f1f1f;
+    padding: 2rem 1.5rem;
+    width: 300px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(141,168,207,0.3);
+}
+
+.about-card h2 {
+    color: #A8BFE0;
+    font-size: 1.2rem;
+    margin: 0.8rem 0 0.6rem;
+}
+
+.about-card p {
+    color: #ddd;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.about-icon {
+    font-size: 2rem;
+    color: #8DA8CF;
+}
+
+.about-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #222;
+    margin: 3rem 0;
+}
+
+.about-bottom h2 {
+    color: #A8BFE0;
+    margin-bottom: 0.8rem;
+}
+
+.about-bottom p {
+    color: #ccc;
+    margin-bottom: 0.4rem;
+}
+
+.about-bottom a {
+    color: #8DA8CF;
+    text-decoration: none;
+}
+
+.about-bottom a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .about-card {
+        width: 100%;
+    }
+}

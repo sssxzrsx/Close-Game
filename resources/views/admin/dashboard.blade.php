@@ -116,8 +116,16 @@
                 @endif
 
                 <div class="ticket-status-bar">
+                    @php
+                        $statusText = match ($ticket->status) {
+                            'open' => 'Открыто',
+                            'answered' => 'Закрыто',
+                            default => ucfirst($ticket->status),
+                        };
+                    @endphp
+
                     <span class="ticket-status-label {{ $ticket->status }}">
-                        {{ strtoupper($ticket->status) }}
+                        {{ $statusText }}
                     </span>
                 </div>
             </div>
