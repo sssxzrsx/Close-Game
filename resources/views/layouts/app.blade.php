@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="{{ asset('style/navbar.css') }}">
     <link rel="stylesheet" href="{{ asset('style/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('style/index.css') }}">
-    <link rel="stylesheet" href="{{ asset('style/register.css') }}">
-    <link rel="stylesheet" href="{{ asset('style/login.css') }}">
+    <link rel="stylesheet" href="{{ asset('style/auth.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="{{ asset('fontawesome/css/all.min.css') }}">

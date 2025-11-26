@@ -9,90 +9,177 @@
 .about-container {
     max-width: 1000px;
     margin: 0 auto;
-    text-align: center;
 }
 
+/* Заголовки */
 .about-title {
-    font-size: 1.8rem;
+    text-align: center;
+    font-size: 1.9rem;
     color: #8DA8CF;
     margin-bottom: 1rem;
-    letter-spacing: 0.8px;
 }
-
 .about-subtitle {
+    text-align: center;
     color: #ccc;
     font-size: 0.95rem;
     line-height: 1.6;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
 }
 
-.about-blocks {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+/* История */
+.about-history {
+    margin-bottom: 3rem;
+}
+.about-history h2 {
+    color: #A8BFE0;
+    margin-bottom: 1rem;
+}
+.about-history p {
+    color: #ddd;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+.about-timeline {
+    list-style: none;
+    padding: 0;
+    border-left: 2px solid #8DA8CF;
+    margin-left: 1.2rem;
+}
+.about-timeline li {
+    position: relative;
+    color: #ccc;
+    margin-bottom: 0.8rem;
+    padding-left: 1rem;
+}
+.about-timeline li span {
+    position: absolute;
+    left: -2.5rem;
+    color: #8DA8CF;
+    font-weight: bold;
+}
+
+/* Почему выбирают нас */
+.about-features h2,
+.about-mission h2,
+.about-team h2,
+.about-bottom h2 {
+    text-align: center;
+    color: #A8BFE0;
+    margin-bottom: 1.5rem;
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 1.5rem;
+    margin-bottom: 3rem;
 }
-
-.about-card {
+.feature-item {
     background-color: #111;
-    border-radius: 12px;
     border: 1px solid #1f1f1f;
-    padding: 2rem 1.5rem;
-    width: 300px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    padding: 1.8rem 1.2rem;
+    text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
-
-.about-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(141,168,207,0.3);
+.feature-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 15px rgba(141,168,207,0.3);
 }
-
-.about-card h2 {
-    color: #A8BFE0;
-    font-size: 1.2rem;
-    margin: 0.8rem 0 0.6rem;
-}
-
-.about-card p {
-    color: #ddd;
-    font-size: 0.9rem;
-    line-height: 1.5;
-}
-
-.about-icon {
+.feature-item i {
     font-size: 2rem;
     color: #8DA8CF;
+    margin-bottom: 0.7rem;
+}
+.feature-item h3 {
+    color: #A8BFE0;
+    margin-bottom: 0.5rem;
 }
 
+/* Миссия */
+.about-mission {
+    background-color: #0d0d0d;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid #1f1f1f;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.about-mission p {
+    color: #ddd;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Команда */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+.team-member {
+    background-color: #111;
+    border: 1px solid #1f1f1f;
+    border-radius: 12px;
+    padding: 2rem 1rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.team-member:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 15px rgba(141,168,207,0.3);
+}
+.member-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(141,168,207,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.8rem;
+}
+.member-icon i {
+    font-size: 1.8rem;
+    color: #8DA8CF;
+}
+.team-member h3 {
+    color: #A8BFE0;
+    margin-bottom: 0.5rem;
+}
+.team-member p {
+    color: #ccc;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Разделитель и контакты */
 .about-divider {
-    width: 100%;
     height: 1px;
     background-color: #222;
-    margin: 3rem 0;
+    margin: 2.5rem 0;
 }
-
-.about-bottom h2 {
-    color: #A8BFE0;
-    margin-bottom: 0.8rem;
+.about-bottom {
+    text-align: center;
 }
-
 .about-bottom p {
     color: #ccc;
-    margin-bottom: 0.4rem;
+    margin: 0.3rem 0;
 }
-
 .about-bottom a {
     color: #8DA8CF;
     text-decoration: none;
 }
-
 .about-bottom a:hover {
     text-decoration: underline;
 }
 
+/* Адаптив */
 @media (max-width: 768px) {
-    .about-card {
-        width: 100%;
+    .about-section {
+        padding: 2rem 1rem;
+    }
+    .feature-item, .team-member {
+        padding: 1.2rem 1rem;
     }
 }
