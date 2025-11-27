@@ -7,37 +7,29 @@
 @endpush
 
 @section('content')
-<section class="game-page">
-    <div class="game-container">
-        <div class="game-image">
-            <img src="{{ asset('storage/'.$game->image) }}" alt="{{ $game->title }}">
-        </div>
-
-        <div class="game-info">
-            <h1 class="game-title">{{ $game->title }}</h1>
+<section class="game-section">
+    <div class="game-banner" style="background-image: url('{{ asset('storage/'.$game->image) }}')">
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+            <h1>{{ $game->title }}</h1>
 
             @if($game->discount_price)
-                <div class="price-block">
-                    <span class="price">{{ $game->discount_price }}₽</span>
-                    <span class="old-price">{{ $game->price }}₽</span>
+                <div class="banner-price">
+                    <span class="price-discount">{{ $game->discount_price }}₽</span>
+                    <span class="price-old">{{ $game->price }}₽</span>
                 </div>
             @else
-                <div class="price-block">
-                    <span class="price">{{ $game->price }}₽</span>
+                <div class="banner-price">
+                    <span class="price-normal">{{ $game->price }}₽</span>
                 </div>
             @endif
 
-            <p class="game-category">
-                Категория:
-                <span>{{ $game->category->name ?? 'Без категории' }}</span>
-            </p>
-
-            <p class="game-description">
-                {{ $game->description ?? 'Описание пока отсутствует.' }}
+            <p class="banner-category">
+                Категория: <span>{{ $game->category->name ?? 'Без категории' }}</span>
             </p>
 
             @auth
-                <form action="{{ route('cart.add', $game) }}" method="POST">
+                <form action="{{ route('cart.add', $game) }}" method="POST" class="banner-form">
                     @csrf
                     <button type="submit" class="btn-buy">Купить</button>
                 </form>
@@ -47,14 +39,24 @@
         </div>
     </div>
 
+    <div class="game-description-container">
+        <h2>Об игре</h2>
+        <p>{{ $game->description ?? 'Описание пока отсутствует.' }}</p>
+    </div>
+
     @if($related->count())
-        <div class="related-games">
+        <div class="related-section">
             <h2>Похожие игры</h2>
             <div class="related-grid">
                 @foreach($related as $rel)
                     <a href="{{ route('catalog.show', $rel) }}" class="related-card">
-                        <img src="{{ asset('storage/'.$rel->image) }}" alt="{{ $rel->title }}">
-                        <p>{{ $rel->title }}</p>
+                        <div class="related-thumb">
+                            <img src="{{ asset('storage/'.$rel->image) }}" alt="{{ $rel->title }}">
+                        </div>
+                        <div class="related-info">
+                            <h3>{{ $rel->title }}</h3>
+                            <p>{{ $rel->category->name ?? 'Без категории' }}</p>
+                        </div>
                     </a>
                 @endforeach
             </div>

@@ -8,20 +8,24 @@
 
 @section('content')
 <section class="catalog-section">
-    <h1 class="catalog-title">КАТАЛОГ ИГР</h1>
-    @if($categories->count())
-        <div class="category-list">
-            @foreach($categories as $category)
-                <a href="{{ route('catalog', ['category' => $category->id]) }}"
-                   class="category-item {{ request('category') == $category->id ? 'active' : '' }}">
-                    {{ $category->name }}
+    <div class="category-filter">
+        <ul>
+            <li>
+                <a href="{{ route('catalog', ['category' => 'all']) }}"
+                   class="{{ request('category') == 'all' || !request('category') ? 'active' : '' }}">
+                   Все игры
                 </a>
+            </li>
+            @foreach($categories as $cat)
+                <li>
+                    <a href="{{ route('catalog', ['category' => $cat->id]) }}"
+                       class="{{ request('category') == $cat->id ? 'active' : '' }}">
+                        {{ $cat->name }}
+                    </a>
+                </li>
             @endforeach
-        </div>
-    @else
-        <p class="text-empty">Категории пока не добавлены</p>
-    @endif
-
+        </ul>
+    </div>
 <div class="catalog-grid">
 @forelse($games as $game)
     <div class="game-card {{ $game->discount_price ? 'discounted' : '' }}">

@@ -67,6 +67,26 @@
     text-decoration: underline;
 }
 
+.alert {
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.alert-danger {
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid #e44545;
+  color: #e44545;
+}
+
+.alert-success {
+  background: rgba(0, 255, 0, 0.1);
+  border: 1px solid #45e46b;
+  color: #45e46b;
+}
+
 .btn-auth {
     width: 100%;
     background-color: #8DA8CF;

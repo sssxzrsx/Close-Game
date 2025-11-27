@@ -11,15 +11,16 @@ class ProductController extends Controller
     public function index(Request $request)
     {
         $categories = Category::orderBy('name')->get();
+
         $query = Game::query()->with('category');
 
-        if ($request->filled('category')) {
+        if ($request->filled('category') && $request->category !== 'all') {
             $query->where('category_id', $request->category);
         }
 
         $games = $query->get();
 
-        return view('catalog.index', compact('categories', 'games'));
+        return view('catalog.index', compact('games', 'categories'));
     }
     public function show(Game $game)
     {

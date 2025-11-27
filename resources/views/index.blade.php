@@ -8,16 +8,16 @@
     <div class="slider">
         <div class="slides">
             <div class="slide active">
-                <img src="{{ asset('images/battlefield6.png') }}" alt="BATTLEFIELD 6">
-                <a href="#" class="btn-more">Подробнее</a>
+                <img src="{{ asset('images/slide 1.jpg') }}" alt="BATTLEFIELD 6">
+                <a href="{{ route('catalog.show', 11) }}" class="btn-more">Подробнее</a>
             </div>
             <div class="slide">
-                <img src="{{ asset('images/helldivers2.png') }}" alt="HELLDIVERS 2">
-                <a href="#" class="btn-more">Подробнее</a>
+                <img src="{{ asset('images/slide 2.jpg') }}" alt="HELLDIVERS 2">
+                <a href="{{ route('catalog.show', 19) }}" class="btn-more">Подробнее</a>
             </div>
             <div class="slide">
-                <img src="{{ asset('images/forza5.png') }}" alt="Forza Horizen 5">
-                <a href="#" class="btn-more">Подробнее</a>
+                <img src="{{ asset('images/slide 3.jpg') }}" alt="Forza Horizen 5">
+                <a href="{{ route('catalog.show', 18) }}" class="btn-more">Подробнее</a>
             </div>
         </div>
 

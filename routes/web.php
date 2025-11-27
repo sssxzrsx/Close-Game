@@ -35,7 +35,6 @@ Route::middleware(['auth', 'admin'])->group(function () {
 });
 
 Route::get('/catalog', [ProductController::class, 'index'])->name('catalog');
-Route::get('/catalog', [ProductController::class, 'index'])->name('catalog');
 Route::get('/catalog/{game}', [ProductController::class, 'show'])->name('catalog.show');
 
 Route::middleware(['auth', 'admin'])->group(function () {
