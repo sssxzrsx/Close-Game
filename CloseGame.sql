@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Ноя 26 2025 г., 09:51
+-- Время создания: Ноя 27 2025 г., 15:18
 -- Версия сервера: 8.0.30
 -- Версия PHP: 8.1.9
 
@@ -57,6 +57,14 @@ CREATE TABLE `cart_items` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Дамп данных таблицы `cart_items`
+--
+
+INSERT INTO `cart_items` (`id`, `cart_id`, `game_id`, `quantity`, `created_at`, `updated_at`) VALUES
+(14, 1, 9, 1, '2025-11-27 06:24:17', '2025-11-27 06:24:17'),
+(15, 2, 11, 1, '2025-11-27 09:15:15', '2025-11-27 09:15:15');
+
 -- --------------------------------------------------------
 
 --
@@ -79,7 +87,8 @@ INSERT INTO `categories` (`id`, `name`, `slug`, `created_at`, `updated_at`) VALU
 (3, 'Шутеры', 'sutery', '2025-11-21 08:53:51', '2025-11-21 08:53:51'),
 (6, 'Хорроры', 'xorrory', '2025-11-26 03:27:50', '2025-11-26 03:27:50'),
 (7, 'RPG', 'rpg', '2025-11-26 03:28:28', '2025-11-26 03:28:28'),
-(8, 'Приключения', 'prikliuceniia', '2025-11-26 03:35:00', '2025-11-26 03:35:00');
+(8, 'Приключения', 'prikliuceniia', '2025-11-26 03:35:00', '2025-11-26 03:35:00'),
+(9, 'Гонки', 'gonki', '2025-11-27 08:56:43', '2025-11-27 08:56:43');
 
 -- --------------------------------------------------------
 
@@ -111,7 +120,9 @@ INSERT INTO `games` (`id`, `title`, `description`, `price`, `discount_price`, `c
 (14, 'Dark Souls III', 'Dark Souls III — компьютерная игра в жанре Action/RPG, разработанная компанией FromSoftware и изданная компанией Bandai Namco в 2016 году. Выпускалась для консолей PlayStation 4, Xbox One и персональных компьютеров.Сюжет происходит в королевстве Лотрик. Первое Пламя, источник жизни, поддерживающий Эру Огня в королевствах, угасает. Тьма начинает порождать нежить и Полых — проклятых существ, которые воскресают после смерти и теряют разум. Спасти мир может ритуал, в котором великие лорды и герои жертвуют своими душами, чтобы поддерживать Первое Пламя как можно дольше. Избранный принц Лотрик отказался от исполнения своего долга и предпочёл издалека наблюдать, как животворящее пламя угасает само собой.', '1099.00', NULL, 7, 'games/8OD2MEsczpHdUq8YAK0EviLmQJk7YQHpZfQ0IZpt.webp', '2025-11-26 03:44:42', '2025-11-26 03:44:42'),
 (15, 'The Elder Scrolls V: Skyrim', 'The Elder Scrolls V: Skyrim (дословно с англ. — «Древние свитки 5: Скайрим») — компьютерная игра в жанре action/RPG с открытым миром, пятая часть в серии The Elder Scrolls. Вышла 11 ноября 2011 года для Windows, PlayStation 3 и Xbox 360. Сюжет: Действие происходит в провинции Скайрим на материке Тамриэль спустя двести лет после событий предыдущей игры серии — The Elder Scrolls IV: Oblivion. Основная сюжетная линия связана с появлением в Скайриме могущественного дракона Алдуина. На главного героя, «Драконорождённого», возложена задача остановить возвращение драконов и сразить Алдуина.', '499.00', '449.00', 8, 'games/sIA09ECvOWka8qIoy1jwEfOwQb4fjw4eSoyMA4cL.webp', '2025-11-26 03:46:51', '2025-11-26 03:46:51'),
 (16, 'Grand Theft Auto V', 'Grand Theft Auto V (GTA V) — компьютерная игра в жанре action-adventure с открытым миром, разработанная компанией Rockstar North и изданная компанией Rockstar Games. Сюжет: В однопользовательском режиме сюжет строится вокруг приключений троих грабителей, которые устраивают всё более дерзкие ограбления и противостоят как организованной преступности, так и правоохранительным ведомствам.', '750.00', NULL, 8, 'games/tx5E4ducKTg0KwQ34wKXswqoDKtriqeXfqjF5szG.webp', '2025-11-26 03:48:58', '2025-11-26 03:48:58'),
-(17, 'Escape from Tarkov', 'Escape from Tarkov («Побег из Таркова») — многопользовательская онлайн-игра в жанре тактического шутера от первого лица с элементами RPG и MMO, разработанная российской компанией Battlestate Games. Полноценный релиз игры запланирован на 15 ноября 2025 года. Сюжет: действие игры происходит в вымышленном российском городе Тарков, охваченном анархией. Город и его окрестности изолированы от внешнего мира миротворческими силами ООН и ВС России после политического кризиса, вызванного незаконной деятельностью транснациональной корпорации TerraGroup. В городе идёт вооружённый конфликт между двумя частными военными компаниями: USEC защищает интересы корпорации, BEAR — формально нанятая властями Норвинской области, по слухам, созданная Правительством России. Игрок берёт роль бывшего наёмника, которому предстоит найти выход из осаждённого Таркова, чтобы выжить.', '1500.00', NULL, 7, 'games/dqDfmBYg2AOLpV6eujJoG1YkFoQw3tQ6xdyUCwIJ.webp', '2025-11-26 03:50:48', '2025-11-26 03:50:48');
+(17, 'Escape from Tarkov', 'Escape from Tarkov («Побег из Таркова») — многопользовательская онлайн-игра в жанре тактического шутера от первого лица с элементами RPG и MMO, разработанная российской компанией Battlestate Games. Полноценный релиз игры запланирован на 15 ноября 2025 года. Сюжет: действие игры происходит в вымышленном российском городе Тарков, охваченном анархией. Город и его окрестности изолированы от внешнего мира миротворческими силами ООН и ВС России после политического кризиса, вызванного незаконной деятельностью транснациональной корпорации TerraGroup. В городе идёт вооружённый конфликт между двумя частными военными компаниями: USEC защищает интересы корпорации, BEAR — формально нанятая властями Норвинской области, по слухам, созданная Правительством России. Игрок берёт роль бывшего наёмника, которому предстоит найти выход из осаждённого Таркова, чтобы выжить.', '1500.00', NULL, 7, 'games/dqDfmBYg2AOLpV6eujJoG1YkFoQw3tQ6xdyUCwIJ.webp', '2025-11-26 03:50:48', '2025-11-26 03:50:48'),
+(18, 'Forza Horizon 5', 'Forza Horizon 5 — пятая часть гоночной серии Forza Horizon, разработанная Playground Games. Действие происходит в Мексике с разнообразными биомами: джунглями, пустынями, болотами, горами. Сюжет: в Мексике проводится фестиваль Horizon, на который съезжаются гонщики со всего мира. Один из них — амбициозный новичок, который должен пройти серию испытаний, чтобы стать легендой автоспорта', '1999.00', '1499.00', 9, 'games/WvY5GjBdCz3wshWisimGsxpCx4tIA1zdo1iLLxP6.webp', '2025-11-27 08:58:03', '2025-11-27 08:58:03'),
+(19, 'Helldivers 2', 'Helldivers 2 — кооперативная компьютерная игра в жанре шутера от третьего лица, продолжение Helldivers (шутера с видом сверху 2015 года). Вышла 8 февраля 2024 года для PlayStation 5 и Windows. 26 августа 2025 года игра выйдет на платформе Xbox Series X/S. Сюжет: Действие игры происходит в далёком будущем. Игроки принимают на себя роли «адских десантников» — солдат на службе Супер-Земли, космического государства людей, которое ведёт галактическую войну с инопланетными врагами. Противниками Супер-Земли являются жуки-Терминиды, «социалистические» киборги-Автоматоны и таинственные инопланетяне-Иллюминаты.', '1649.00', NULL, 3, 'games/JQaJtkyqyXhkR9HjD4XqJ6yGLh0v0aWnfNyLrKc7.webp', '2025-11-27 09:01:13', '2025-11-27 09:01:13');
 
 -- --------------------------------------------------------
 
@@ -175,13 +186,6 @@ CREATE TABLE `tickets` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Дамп данных таблицы `tickets`
---
-
-INSERT INTO `tickets` (`id`, `user_id`, `subject`, `message`, `answer`, `status`, `created_at`, `updated_at`) VALUES
-(3, 2, NULL, '123123', 'че ты пизданул там?', 'answered', '2025-11-25 03:00:05', '2025-11-25 03:00:32');
-
 -- --------------------------------------------------------
 
 --
@@ -204,8 +208,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `is_admin`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin@mail.ru', '$2y$12$jFNoo/xmQyx7fm/ABMzHWu201glMJ7SFX8ZSDEfiLHCp7ztfcCMZO', 1, 'O9Y9xqaRoQrGDISSOnrUWy6yScSoecqV6Bl4yXZXdQ2kcOR865lejbs4QROV', '2025-11-21 06:26:57', '2025-11-21 06:26:57'),
-(2, 'test', 'test@examole.com', '$2y$12$8Lg0IQQCYLnDde3960J.VeGhA/kBLDb5lhs8VE5JGKXDYq3c5SrLO', 0, 'MQfL8fT1hNckgaR9CDFLfSUwwWXM8ItZv7oFg7mcq82Lj4dP1TqUN72anvI0', '2025-11-21 09:42:59', '2025-11-21 09:42:59'),
+(1, 'admin', 'admin@mail.ru', '$2y$12$jFNoo/xmQyx7fm/ABMzHWu201glMJ7SFX8ZSDEfiLHCp7ztfcCMZO', 1, 'KTvhVRV0LJtpe9ztjwXztFP23eZp3hYz3f25p6nt7Qw9EFfY75gpo8buTqJ9', '2025-11-21 06:26:57', '2025-11-21 06:26:57'),
+(2, 'test', 'test@examole.com', '$2y$12$8Lg0IQQCYLnDde3960J.VeGhA/kBLDb5lhs8VE5JGKXDYq3c5SrLO', 0, '8MGcq87XZyYJrPN2ZRCZMl3pe0cY8pjHqtj0pQ6hWIzjAfBMBEjvjmonqXjQ', '2025-11-21 09:42:59', '2025-11-21 09:42:59'),
 (3, 'Maksik', 'Maksik@mail.ru', '$2y$12$GjDQgQ2i83v4RwpRmawzke1YmioATzySpa.KI9tlSSUAd9u8wxm.6', 0, NULL, '2025-11-25 02:07:36', '2025-11-25 02:07:36');
 
 --
@@ -285,19 +289,19 @@ ALTER TABLE `carts`
 -- AUTO_INCREMENT для таблицы `cart_items`
 --
 ALTER TABLE `cart_items`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT для таблицы `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT для таблицы `games`
 --
 ALTER TABLE `games`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT для таблицы `migrations`
@@ -315,7 +319,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT для таблицы `tickets`
 --
 ALTER TABLE `tickets`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
