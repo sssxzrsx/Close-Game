@@ -53,11 +53,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/cart/clear', [CartController::class, 'clear'])
     ->name('cart.clear');
 
-    Route::get('/catalog', [ProductController::class, 'index'])
-    ->name('catalog');
-    Route::get('/catalog/{game}', [ProductController::class, 'show'])
-    ->name('catalog.show');
-
     Route::get('/support', [SupportController::class, 'index'])
     ->name('support');
     Route::post('/support/send', [SupportController::class, 'store'])
@@ -75,7 +70,6 @@ Route::middleware('auth')->group(function () {
 
 
 Route::middleware('guest')->group( function() {
-
     Route::get('/login', [AuthController::class, 'showLoginForm'])
     ->name('login.form');
     Route::post('/login', [AuthController::class, 'login'])
@@ -90,6 +84,12 @@ Route::middleware('guest')->group( function() {
 
 
 Route::group([], function() {
+
+    Route::get('/catalog', [ProductController::class, 'index'])
+    ->name('catalog');
+    Route::get('/catalog/{game}', [ProductController::class, 'show'])
+    ->name('catalog.show');
+    
     Route::get('/', action: [HomeController::class, 'home'])
     ->name('home');
 

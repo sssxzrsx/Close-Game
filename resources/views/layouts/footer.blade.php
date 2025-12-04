@@ -11,7 +11,7 @@
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-logo">
-            <a href="{{ route('home') }}"><img src="{{ asset('images/logo.svg') }}" alt="Logo"></a>
+            <a href="{{ route('home') }}"><img src="{{ asset('storage/images/' . 'logo.svg') }}" alt="Logo"></a>
         </div>
 
         <ul class="footer-links">
@@ -25,7 +25,7 @@
             <div class="footer-social-icons">
                 <a href="https://t.me/closegame/"><i class="fab fa-telegram"></i></a>
                 <a href="https://vk.com/closegame"><i class="fab fa-vk"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitch"></i></a>
             </div>
         </div>
 

@@ -2,7 +2,7 @@
     <div class="navbar-container">
         <div class="navbar-logo">
             <a href="{{ route('home') }}">
-                <img src="{{ asset('images/logo.svg') }}" alt="Logo">
+                <img src="{{ asset('storage/images/' . 'logo.svg') }}" alt="Logo">
             </a>
         </div>
 
@@ -47,9 +47,10 @@
                 </a>
                 @auth
                     @php
-                        $cartItemsCount = \App\Models\Cart::where('user_id', Auth::id())
-                            ->withCount('items')
-                            ->first()->items_count ?? 0;
+                $cartItemsCount = \App\Models\CartItem::whereHas('cart', function ($q) {
+                        $q->where('user_id', Auth::id());
+                    })
+                    ->sum('quantity');
                     @endphp
                     @if($cartItemsCount > 0)
                         <span class="cart-count">{{ $cartItemsCount }}</span>

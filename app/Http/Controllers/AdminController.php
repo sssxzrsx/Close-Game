@@ -69,7 +69,7 @@ class AdminController extends Controller
         if ($game->image) {
             Storage::disk('public')->delete($game->image);
         }
-        
+
         $game->delete();
 
         return back()->with('success', 'Игра удалена');

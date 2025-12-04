@@ -53,7 +53,13 @@
                     <option value="{{ $cat->id }}">{{ $cat->name }}</option>
                 @endforeach
             </select>
-            <input type="file" name="image">
+
+            <div class="file-upload">
+                <label for="image" class="file-upload-label">Выбрать изображение</label>
+                <input type="file" id="image" name="image" accept="image/*" onchange="showFileName(this)">
+                <span class="file-chosen">Файл не выбран</span>
+            </div>
+
             <textarea name="description" placeholder="Описание"></textarea>
             <button type="submit" class="btn-admin">Добавить игру</button>
         </form>
@@ -135,4 +141,12 @@
     </div>
 
 </section>
+
+<script>
+function showFileName(input) {
+    const fileChosen = document.querySelector('.file-chosen');
+    fileChosen.textContent = input.files.length > 0 ? input.files[0].name : 'Файл не выбран';
+}
+</script>
+
 @endsection
