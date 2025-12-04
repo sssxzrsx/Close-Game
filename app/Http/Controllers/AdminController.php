@@ -15,6 +15,7 @@ class AdminController extends Controller
         $categories = Category::all();
         $games = Game::with('category')->latest()->get();
         $tickets = Ticket::with('user')->latest()->get();
+
         return view('admin.dashboard', compact('categories', 'games', 'tickets'));
     }
 
@@ -35,6 +36,7 @@ class AdminController extends Controller
     public function deleteCategory(Category $category)
     {
         $category->delete();
+
         return back()->with('success', 'Категория удалена');
     }
 
@@ -67,7 +69,9 @@ class AdminController extends Controller
         if ($game->image) {
             Storage::disk('public')->delete($game->image);
         }
+        
         $game->delete();
+
         return back()->with('success', 'Игра удалена');
     }
 }

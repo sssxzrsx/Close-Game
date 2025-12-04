@@ -25,9 +25,9 @@ class ProductController extends Controller
     public function show(Game $game)
     {
         $related = Game::where('category_id', $game->category_id)
-                       ->where('id', '!=', $game->id)
-                       ->take(4)
-                       ->get();
+            ->where('id', '!=', $game->id)
+            ->take(4)
+            ->get();
 
         return view('catalog.show', compact('game', 'related'));
     }

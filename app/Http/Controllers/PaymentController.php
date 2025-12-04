@@ -18,6 +18,7 @@ class PaymentController extends Controller
         ]);
 
         $method = $request->input('method');
+        
         return redirect()->route('cart.index')->with('success', "Оплата через {$method} успешно совершена!");
     }
 }

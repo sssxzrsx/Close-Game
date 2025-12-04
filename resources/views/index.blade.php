@@ -9,15 +9,18 @@
         <div class="slides">
             <div class="slide active">
                 <img src="{{ asset('images/slide 1.jpg') }}" alt="BATTLEFIELD 6">
-                <a href="{{ route('catalog.show', 11) }}" class="btn-more">Подробнее</a>
+                <a href="{{ route('catalog.show', 11) }}" class="btn-more">
+                    Подробнее</a>
             </div>
             <div class="slide">
                 <img src="{{ asset('images/slide 2.jpg') }}" alt="HELLDIVERS 2">
-                <a href="{{ route('catalog.show', 19) }}" class="btn-more">Подробнее</a>
+                <a href="{{ route('catalog.show', 19) }}" class="btn-more">
+                    Подробнее</a>
             </div>
             <div class="slide">
                 <img src="{{ asset('images/slide 3.jpg') }}" alt="Forza Horizen 5">
-                <a href="{{ route('catalog.show', 18) }}" class="btn-more">Подробнее</a>
+                <a href="{{ route('catalog.show', 18) }}" class="btn-more">
+                    Подробнее</a>
             </div>
         </div>
 
@@ -31,27 +34,27 @@
 
     <div class="advantages-grid">
         <div class="advantage-card">
-            <img src="{{ asset('images/Vector.png') }}">
+        <i class="fa-solid fa-gift"></i>
             <p>Постоянные скидки и акции</p>
         </div>
         <div class="advantage-card">
-            <img src="{{ asset('images/Vector.png') }}">
+            <i class="fa-solid fa-clock"></i>
             <p>Мгноваенная оплата удобная для вас</p>
         </div>
         <div class="advantage-card">
-            <img src="{{ asset('images/Vector.png') }}">
+            <i class="fa-solid fa-shopping-basket"></i>
             <p>Большой ассортимет товара на любой вкус и цвет</p>
         </div>
         <div class="advantage-card">
-            <img src="{{ asset('images/Vector.png') }}">
+            <i class="fa-solid fa-users"></i>
             <p>Работающая поддержка 24/7 для решения ваших  проблем и ответов на вопросы</p>
         </div>
         <div class="advantage-card">
-            <img src="{{ asset('images/Vector.png') }}">
+            <i class="fa-solid fa-rocket"></i>
             <p>Быстрая оформление заказа и получения товара на свой аккаунт</p>
         </div>
         <div class="advantage-card">
-            <img src="{{ asset('images/Vector.png') }}">
+            <i class="fa-solid fa-rub"></i>
             <p>Низкие цены на товар по сравнению с конкурентами</p>
         </div>
     </div>

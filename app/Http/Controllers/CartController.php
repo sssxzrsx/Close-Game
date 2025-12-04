@@ -39,6 +39,7 @@ class CartController extends Controller
     public function remove(CartItem $item)
     {
         $item->delete();
+        
         return redirect()->route('cart.index')->with('success', 'Товар удалён');
     }
 
