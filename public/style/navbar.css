@@ -234,7 +234,7 @@
     }
 
     .btn-auth, .btn-logout {
-        width: 90%;
+        width: 100%;
         text-align: center;
     }
 }

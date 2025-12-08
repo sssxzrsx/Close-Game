@@ -23,8 +23,8 @@
 
                 <label class="payment-option">
                     <input type="radio" name="method" value="PayPal">
-                    <i class="fa-brands fa-paypal"></i>
-                    <span>PayPal</span>
+                    <i class="fa-brands fa-btc"></i>
+                    <span>Криптовалюта</span>
                 </label>
 
                 <label class="payment-option">
