@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Ноя 27 2025 г., 15:18
+-- Время создания: Дек 06 2025 г., 13:59
 -- Версия сервера: 8.0.30
 -- Версия PHP: 8.1.9
 
@@ -62,8 +62,7 @@ CREATE TABLE `cart_items` (
 --
 
 INSERT INTO `cart_items` (`id`, `cart_id`, `game_id`, `quantity`, `created_at`, `updated_at`) VALUES
-(14, 1, 9, 1, '2025-11-27 06:24:17', '2025-11-27 06:24:17'),
-(15, 2, 11, 1, '2025-11-27 09:15:15', '2025-11-27 09:15:15');
+(20, 2, 9, 1, '2025-12-02 05:21:47', '2025-12-02 05:21:47');
 
 -- --------------------------------------------------------
 
@@ -113,16 +112,16 @@ CREATE TABLE `games` (
 --
 
 INSERT INTO `games` (`id`, `title`, `description`, `price`, `discount_price`, `category_id`, `image`, `created_at`, `updated_at`) VALUES
-(9, 'Battlefield 6', 'Battlefield 6 — компьютерная игра в жанре шутера от первого лица, разработанная Battlefield Studios и изданная Electronic Arts. Вышла 10 октября 2025 года для Windows, PlayStation 5 и Xbox Series X/S.Сюжет игры разворачивается в будущем, между 2027 и 2028 годами. Центральное место занимает конфликт между НАТО и частной военной корпорацией Pax Armata, финансируемой бывшими государствами-членами альянса. Эта компания представляет угрозу, которая ставит под вопрос будущее мирового порядка.', '3500.00', '2999.00', 3, 'games/YLOp1uhe8J9kaSP7lxmNEpAsiDQRNtYEuw27GyZz.jpg', '2025-11-26 03:32:13', '2025-11-26 03:32:13'),
-(10, 'Red Dead Redemption 2', 'Red Dead Redemption 2 (RDR2) — компьютерная игра в жанрах action-adventure и шутера от третьего лица с открытым миром, разработанная Rockstar Studios. Вышла для консолей PlayStation 4 и Xbox One 26 октября 2018 года, для персональных компьютеров под управлением Windows — 5 ноября 2019 года. Является третьей игрой в серии Red Dead и приквелом к Red Dead Redemption 2010 года. Сюжет: Игра построена вокруг приключений банды Датча Ван дер Линде. Под управлением игрока находится один из членов банды — Артур Морган, а после прохождения сюжетной линии до эпилога — другой член банды, Джон Марстон.', '990.00', NULL, 8, 'games/jqwsV4PIICEyUEZ4vfU1a5Bs3nVBl6yz0iaLQeN6.webp', '2025-11-26 03:36:23', '2025-11-26 03:36:23'),
-(11, 'Hollow Knight: Silksong', 'Hollow Knight: Silksong — компьютерная игра в жанре метроидвании, разработанная студией Team Cherry. Релиз состоялся 4 сентября 2025 года. Действие игры происходит в увядающем королевстве Фарлуме. Игрок управляет Хорнет, инсектоидным существом, использующей иглу для борьбы с врагами.', '950.00', '1000.00', 8, 'games/MZ7ueDiMfHUU3HatW56Z3gspdVwo8EvSbUPT5H69.webp', '2025-11-26 03:39:01', '2025-11-26 03:39:01'),
-(12, 'Half-Life Alyx', 'Half-Life: Alyx — шутер от первого лица в виртуальной реальности (VR), разработанный компанией Valve. Выпущен 23 марта 2020 года. Сюжет: Действие происходит между событиями Half-Life и Half-Life 2 — в тот период, когда Гордон Фримен, главный герой предыдущих частей, находится в стазисе вне пространства и времени.', '1999.00', NULL, 3, 'games/ENT9qiBl3aH5DFmfcokohhqQp6T2h2F6R0erXXiy.webp', '2025-11-26 03:41:06', '2025-11-26 03:41:06'),
-(14, 'Dark Souls III', 'Dark Souls III — компьютерная игра в жанре Action/RPG, разработанная компанией FromSoftware и изданная компанией Bandai Namco в 2016 году. Выпускалась для консолей PlayStation 4, Xbox One и персональных компьютеров.Сюжет происходит в королевстве Лотрик. Первое Пламя, источник жизни, поддерживающий Эру Огня в королевствах, угасает. Тьма начинает порождать нежить и Полых — проклятых существ, которые воскресают после смерти и теряют разум. Спасти мир может ритуал, в котором великие лорды и герои жертвуют своими душами, чтобы поддерживать Первое Пламя как можно дольше. Избранный принц Лотрик отказался от исполнения своего долга и предпочёл издалека наблюдать, как животворящее пламя угасает само собой.', '1099.00', NULL, 7, 'games/8OD2MEsczpHdUq8YAK0EviLmQJk7YQHpZfQ0IZpt.webp', '2025-11-26 03:44:42', '2025-11-26 03:44:42'),
-(15, 'The Elder Scrolls V: Skyrim', 'The Elder Scrolls V: Skyrim (дословно с англ. — «Древние свитки 5: Скайрим») — компьютерная игра в жанре action/RPG с открытым миром, пятая часть в серии The Elder Scrolls. Вышла 11 ноября 2011 года для Windows, PlayStation 3 и Xbox 360. Сюжет: Действие происходит в провинции Скайрим на материке Тамриэль спустя двести лет после событий предыдущей игры серии — The Elder Scrolls IV: Oblivion. Основная сюжетная линия связана с появлением в Скайриме могущественного дракона Алдуина. На главного героя, «Драконорождённого», возложена задача остановить возвращение драконов и сразить Алдуина.', '499.00', '449.00', 8, 'games/sIA09ECvOWka8qIoy1jwEfOwQb4fjw4eSoyMA4cL.webp', '2025-11-26 03:46:51', '2025-11-26 03:46:51'),
-(16, 'Grand Theft Auto V', 'Grand Theft Auto V (GTA V) — компьютерная игра в жанре action-adventure с открытым миром, разработанная компанией Rockstar North и изданная компанией Rockstar Games. Сюжет: В однопользовательском режиме сюжет строится вокруг приключений троих грабителей, которые устраивают всё более дерзкие ограбления и противостоят как организованной преступности, так и правоохранительным ведомствам.', '750.00', NULL, 8, 'games/tx5E4ducKTg0KwQ34wKXswqoDKtriqeXfqjF5szG.webp', '2025-11-26 03:48:58', '2025-11-26 03:48:58'),
-(17, 'Escape from Tarkov', 'Escape from Tarkov («Побег из Таркова») — многопользовательская онлайн-игра в жанре тактического шутера от первого лица с элементами RPG и MMO, разработанная российской компанией Battlestate Games. Полноценный релиз игры запланирован на 15 ноября 2025 года. Сюжет: действие игры происходит в вымышленном российском городе Тарков, охваченном анархией. Город и его окрестности изолированы от внешнего мира миротворческими силами ООН и ВС России после политического кризиса, вызванного незаконной деятельностью транснациональной корпорации TerraGroup. В городе идёт вооружённый конфликт между двумя частными военными компаниями: USEC защищает интересы корпорации, BEAR — формально нанятая властями Норвинской области, по слухам, созданная Правительством России. Игрок берёт роль бывшего наёмника, которому предстоит найти выход из осаждённого Таркова, чтобы выжить.', '1500.00', NULL, 7, 'games/dqDfmBYg2AOLpV6eujJoG1YkFoQw3tQ6xdyUCwIJ.webp', '2025-11-26 03:50:48', '2025-11-26 03:50:48'),
-(18, 'Forza Horizon 5', 'Forza Horizon 5 — пятая часть гоночной серии Forza Horizon, разработанная Playground Games. Действие происходит в Мексике с разнообразными биомами: джунглями, пустынями, болотами, горами. Сюжет: в Мексике проводится фестиваль Horizon, на который съезжаются гонщики со всего мира. Один из них — амбициозный новичок, который должен пройти серию испытаний, чтобы стать легендой автоспорта', '1999.00', '1499.00', 9, 'games/WvY5GjBdCz3wshWisimGsxpCx4tIA1zdo1iLLxP6.webp', '2025-11-27 08:58:03', '2025-11-27 08:58:03'),
-(19, 'Helldivers 2', 'Helldivers 2 — кооперативная компьютерная игра в жанре шутера от третьего лица, продолжение Helldivers (шутера с видом сверху 2015 года). Вышла 8 февраля 2024 года для PlayStation 5 и Windows. 26 августа 2025 года игра выйдет на платформе Xbox Series X/S. Сюжет: Действие игры происходит в далёком будущем. Игроки принимают на себя роли «адских десантников» — солдат на службе Супер-Земли, космического государства людей, которое ведёт галактическую войну с инопланетными врагами. Противниками Супер-Земли являются жуки-Терминиды, «социалистические» киборги-Автоматоны и таинственные инопланетяне-Иллюминаты.', '1649.00', NULL, 3, 'games/JQaJtkyqyXhkR9HjD4XqJ6yGLh0v0aWnfNyLrKc7.webp', '2025-11-27 09:01:13', '2025-11-27 09:01:13');
+(9, 'Battlefield 6', 'Battlefield 6 — компьютерная игра в жанре шутера от первого лица, разработанная Battlefield Studios и изданная Electronic Arts. Вышла 10 октября 2025 года для Windows, PlayStation 5 и Xbox Series X/S.Сюжет игры разворачивается в будущем, между 2027 и 2028 годами. Центральное место занимает конфликт между НАТО и частной военной корпорацией Pax Armata, финансируемой бывшими государствами-членами альянса. Эта компания представляет угрозу, которая ставит под вопрос будущее мирового порядка.', '3500.00', '2999.00', 3, 'games/b6.jpg', '2025-11-26 03:32:13', '2025-11-26 03:32:13'),
+(10, 'Red Dead Redemption 2', 'Red Dead Redemption 2 (RDR2) — компьютерная игра в жанрах action-adventure и шутера от третьего лица с открытым миром, разработанная Rockstar Studios. Вышла для консолей PlayStation 4 и Xbox One 26 октября 2018 года, для персональных компьютеров под управлением Windows — 5 ноября 2019 года. Является третьей игрой в серии Red Dead и приквелом к Red Dead Redemption 2010 года. Сюжет: Игра построена вокруг приключений банды Датча Ван дер Линде. Под управлением игрока находится один из членов банды — Артур Морган, а после прохождения сюжетной линии до эпилога — другой член банды, Джон Марстон.', '990.00', NULL, 8, 'games/rdr.png', '2025-11-26 03:36:23', '2025-11-26 03:36:23'),
+(11, 'Hollow Knight: Silksong', 'Hollow Knight: Silksong — компьютерная игра в жанре метроидвании, разработанная студией Team Cherry. Релиз состоялся 4 сентября 2025 года. Действие игры происходит в увядающем королевстве Фарлуме. Игрок управляет Хорнет, инсектоидным существом, использующей иглу для борьбы с врагами.', '950.00', '1000.00', 8, 'games/hollow.png', '2025-11-26 03:39:01', '2025-11-26 03:39:01'),
+(12, 'Half-Life Alyx', 'Half-Life: Alyx — шутер от первого лица в виртуальной реальности (VR), разработанный компанией Valve. Выпущен 23 марта 2020 года. Сюжет: Действие происходит между событиями Half-Life и Half-Life 2 — в тот период, когда Гордон Фримен, главный герой предыдущих частей, находится в стазисе вне пространства и времени.', '1999.00', NULL, 3, 'games/halfa.png', '2025-11-26 03:41:06', '2025-11-26 03:41:06'),
+(14, 'Dark Souls III', 'Dark Souls III — компьютерная игра в жанре Action/RPG, разработанная компанией FromSoftware и изданная компанией Bandai Namco в 2016 году. Выпускалась для консолей PlayStation 4, Xbox One и персональных компьютеров.Сюжет происходит в королевстве Лотрик. Первое Пламя, источник жизни, поддерживающий Эру Огня в королевствах, угасает. Тьма начинает порождать нежить и Полых — проклятых существ, которые воскресают после смерти и теряют разум. Спасти мир может ритуал, в котором великие лорды и герои жертвуют своими душами, чтобы поддерживать Первое Пламя как можно дольше. Избранный принц Лотрик отказался от исполнения своего долга и предпочёл издалека наблюдать, как животворящее пламя угасает само собой.', '1099.00', NULL, 7, 'games/ds.png', '2025-11-26 03:44:42', '2025-11-26 03:44:42'),
+(15, 'The Elder Scrolls V: Skyrim', 'The Elder Scrolls V: Skyrim (дословно с англ. — «Древние свитки 5: Скайрим») — компьютерная игра в жанре action/RPG с открытым миром, пятая часть в серии The Elder Scrolls. Вышла 11 ноября 2011 года для Windows, PlayStation 3 и Xbox 360. Сюжет: Действие происходит в провинции Скайрим на материке Тамриэль спустя двести лет после событий предыдущей игры серии — The Elder Scrolls IV: Oblivion. Основная сюжетная линия связана с появлением в Скайриме могущественного дракона Алдуина. На главного героя, «Драконорождённого», возложена задача остановить возвращение драконов и сразить Алдуина.', '499.00', '449.00', 8, 'games/sky.png', '2025-11-26 03:46:51', '2025-11-26 03:46:51'),
+(16, 'Grand Theft Auto V', 'Grand Theft Auto V (GTA V) — компьютерная игра в жанре action-adventure с открытым миром, разработанная компанией Rockstar North и изданная компанией Rockstar Games. Сюжет: В однопользовательском режиме сюжет строится вокруг приключений троих грабителей, которые устраивают всё более дерзкие ограбления и противостоят как организованной преступности, так и правоохранительным ведомствам.', '750.00', NULL, 8, 'games/gg.png', '2025-11-26 03:48:58', '2025-11-26 03:48:58'),
+(17, 'Escape from Tarkov', 'Escape from Tarkov («Побег из Таркова») — многопользовательская онлайн-игра в жанре тактического шутера от первого лица с элементами RPG и MMO, разработанная российской компанией Battlestate Games. Полноценный релиз игры запланирован на 15 ноября 2025 года. Сюжет: действие игры происходит в вымышленном российском городе Тарков, охваченном анархией. Город и его окрестности изолированы от внешнего мира миротворческими силами ООН и ВС России после политического кризиса, вызванного незаконной деятельностью транснациональной корпорации TerraGroup. В городе идёт вооружённый конфликт между двумя частными военными компаниями: USEC защищает интересы корпорации, BEAR — формально нанятая властями Норвинской области, по слухам, созданная Правительством России. Игрок берёт роль бывшего наёмника, которому предстоит найти выход из осаждённого Таркова, чтобы выжить.', '1500.00', NULL, 7, 'games/tar.png', '2025-11-26 03:50:48', '2025-11-26 03:50:48'),
+(18, 'Forza Horizon 5', 'Forza Horizon 5 — пятая часть гоночной серии Forza Horizon, разработанная Playground Games. Действие происходит в Мексике с разнообразными биомами: джунглями, пустынями, болотами, горами. Сюжет: в Мексике проводится фестиваль Horizon, на который съезжаются гонщики со всего мира. Один из них — амбициозный новичок, который должен пройти серию испытаний, чтобы стать легендой автоспорта', '1999.00', '1499.00', 9, 'games/forza5.png', '2025-11-27 08:58:03', '2025-11-27 08:58:03'),
+(19, 'Helldivers 2', 'Helldivers 2 — кооперативная компьютерная игра в жанре шутера от третьего лица, продолжение Helldivers (шутера с видом сверху 2015 года). Вышла 8 февраля 2024 года для PlayStation 5 и Windows. 26 августа 2025 года игра выйдет на платформе Xbox Series X/S. Сюжет: Действие игры происходит в далёком будущем. Игроки принимают на себя роли «адских десантников» — солдат на службе Супер-Земли, космического государства людей, которое ведёт галактическую войну с инопланетными врагами. Противниками Супер-Земли являются жуки-Терминиды, «социалистические» киборги-Автоматоны и таинственные инопланетяне-Иллюминаты.', '1649.00', NULL, 3, 'games/hell2.png', '2025-11-27 09:01:13', '2025-11-27 09:01:13');
 
 -- --------------------------------------------------------
 
@@ -148,7 +147,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (5, '2025_11_21_100952_create_carts_table', 2),
 (6, '2025_11_21_101020_create_cart_items_table', 2),
 (7, '2025_11_25_041737_create_tickets_table', 3),
-(8, '2025_11_25_041853_create_tickets_table', 4);
+(8, '2025_11_25_041853_create_tickets_table', 4),
+(9, '2025_12_04_100729_create_sessions_table', 5);
 
 -- --------------------------------------------------------
 
@@ -168,6 +168,29 @@ CREATE TABLE `personal_access_tokens` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `sessions`
+--
+
+CREATE TABLE `sessions` (
+  `id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_id` bigint UNSIGNED DEFAULT NULL,
+  `ip_address` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_agent` text COLLATE utf8mb4_unicode_ci,
+  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `last_activity` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `sessions`
+--
+
+INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
+('n3jgxQn5CKHVSx7EYcSvCyQZ8dIZGMP1HnY34tey', NULL, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 YaBrowser/25.10.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiOGpsMTZoWlhGSWxCRlRNbVRydXA5WTB4dXFmb0FabXBnR0J4ZVVGTSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjQ6Imh0dHA6Ly9sb2NhbGhvc3QvY2F0YWxvZyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1765012639),
+('O3FwrGZqbyhHjkF3fYyHblHD8S80XqugLlVubXZq', 1, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 YaBrowser/25.10.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiS3BDNjFPYWp5dGd2eExycms4TklzNHpOMXZ0VExSRXhiNm5JVHRDeiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJuZXciO2E6MDp7fXM6Mzoib2xkIjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzI6Imh0dHA6Ly9sb2NhbGhvc3QvYWRtaW4vZGFzaGJvYXJkIjt9czozOiJ1cmwiO2E6MTp7czo4OiJpbnRlbmRlZCI7czoyNDoiaHR0cDovL2xvY2FsaG9zdC9zdXBwb3J0Ijt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9', 1764850753);
 
 -- --------------------------------------------------------
 
@@ -208,8 +231,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `is_admin`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin@mail.ru', '$2y$12$jFNoo/xmQyx7fm/ABMzHWu201glMJ7SFX8ZSDEfiLHCp7ztfcCMZO', 1, 'KTvhVRV0LJtpe9ztjwXztFP23eZp3hYz3f25p6nt7Qw9EFfY75gpo8buTqJ9', '2025-11-21 06:26:57', '2025-11-21 06:26:57'),
-(2, 'test', 'test@examole.com', '$2y$12$8Lg0IQQCYLnDde3960J.VeGhA/kBLDb5lhs8VE5JGKXDYq3c5SrLO', 0, '8MGcq87XZyYJrPN2ZRCZMl3pe0cY8pjHqtj0pQ6hWIzjAfBMBEjvjmonqXjQ', '2025-11-21 09:42:59', '2025-11-21 09:42:59'),
+(1, 'admin', 'admin@mail.ru', '$2y$12$jFNoo/xmQyx7fm/ABMzHWu201glMJ7SFX8ZSDEfiLHCp7ztfcCMZO', 1, 'wWKnAV54EGukChfJ0cs2EnaCedYTic4AndZROKNqQgCBWTdpcNMUGsC7odlw', '2025-11-21 06:26:57', '2025-11-21 06:26:57'),
+(2, 'test', 'test@examole.com', '$2y$12$8Lg0IQQCYLnDde3960J.VeGhA/kBLDb5lhs8VE5JGKXDYq3c5SrLO', 0, 'AArxj1WDtO3n4hjUOmPQptCmJ4k9eUuMPozR4itlZ4Gx1SU3cLteaC8rRz8w', '2025-11-21 09:42:59', '2025-11-21 09:42:59'),
 (3, 'Maksik', 'Maksik@mail.ru', '$2y$12$GjDQgQ2i83v4RwpRmawzke1YmioATzySpa.KI9tlSSUAd9u8wxm.6', 0, NULL, '2025-11-25 02:07:36', '2025-11-25 02:07:36');
 
 --
@@ -261,6 +284,14 @@ ALTER TABLE `personal_access_tokens`
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
+-- Индексы таблицы `sessions`
+--
+ALTER TABLE `sessions`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `sessions_user_id_index` (`user_id`),
+  ADD KEY `sessions_last_activity_index` (`last_activity`);
+
+--
 -- Индексы таблицы `tickets`
 --
 ALTER TABLE `tickets`
@@ -289,25 +320,25 @@ ALTER TABLE `carts`
 -- AUTO_INCREMENT для таблицы `cart_items`
 --
 ALTER TABLE `cart_items`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT для таблицы `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT для таблицы `games`
 --
 ALTER TABLE `games`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT для таблицы `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT для таблицы `personal_access_tokens`
@@ -319,7 +350,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT для таблицы `tickets`
 --
 ALTER TABLE `tickets`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
