@@ -11,7 +11,6 @@
     margin: 0 auto;
 }
 
-/* Заголовки */
 .about-title {
     text-align: center;
     font-size: 1.9rem;
@@ -26,7 +25,6 @@
     margin-bottom: 3rem;
 }
 
-/* История */
 .about-history {
     margin-bottom: 3rem;
 }
@@ -58,7 +56,6 @@
     font-weight: bold;
 }
 
-/* Почему выбирают нас */
 .about-features h2,
 .about-mission h2,
 .about-team h2,
@@ -95,7 +92,6 @@
     margin-bottom: 0.5rem;
 }
 
-/* Миссия */
 .about-mission {
     background-color: #0d0d0d;
     padding: 2rem;
@@ -110,7 +106,6 @@
     line-height: 1.6;
 }
 
-/* Команда */
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -153,7 +148,6 @@
     line-height: 1.4;
 }
 
-/* Разделитель и контакты */
 .about-divider {
     height: 1px;
     background-color: #222;
@@ -174,7 +168,6 @@
     text-decoration: underline;
 }
 
-/* Адаптив */
 @media (max-width: 768px) {
     .about-section {
         padding: 2rem 1rem;

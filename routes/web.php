@@ -29,9 +29,14 @@ Route::prefix('admin')->middleware(['auth', 'can:admin'])->group(function () {
     Route::delete('/categories/{category}', [AdminController::class, 'deleteCategory'])
     ->name('admin.categories.delete');
 
-    Route::post('/games', [AdminController::class, 'storeGame'])->name('admin.games.store');
+    Route::post('/games', [AdminController::class, 'storeGame'])
+    ->name('admin.games.store');
     Route::delete('/games/{game}', [AdminController::class, 'deleteGame'])
     ->name('admin.games.delete');
+    Route::get('/games/{game}/edit', [AdminController::class, 'editGame'])
+    ->name('admin.games.edit');
+    Route::put('/games/{game}', [AdminController::class, 'updateGame'])
+    ->name('admin.games.update');
 
     Route::get('/admin/tickets', [SupportController::class, 'adminIndex'])
     ->name('admin.tickets');

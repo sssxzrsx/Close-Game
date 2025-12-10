@@ -68,7 +68,6 @@
     border-color: #8DA8CF;
 }
 
-/* Кнопки */
 .btn-pay-submit {
     background-color: #8DA8CF;
     border: none;
@@ -96,7 +95,6 @@
     text-decoration: underline;
 }
 
-/* Адаптив */
 @media (max-width: 768px) {
     .payment-option {
         flex: 1 1 100%;

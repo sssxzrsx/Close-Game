@@ -69,9 +69,9 @@
     transform: translateX(-50%);
     padding: 0.6rem 1.4rem;
     font-size: 0.95rem;
-    background-color: transparent;      /* прозрачный фон */
+    background-color: transparent;
     color: #ffffff;
-    border: 2px solid #8DA8CF;          /* аккуратная обводка */
+    border: 2px solid #8DA8CF;
     border-radius: 6px;
     text-transform: uppercase;
     text-decoration: none;
@@ -82,8 +82,8 @@
 }
 
 .btn-more:hover {
-    background-color: rgba(141, 168, 207, 0.25);  /* лёгкий подсвет подвижный фон */
-    border-color: #A8BFE0;                        /* светлее обводка */
+    background-color: rgba(141, 168, 207, 0.25);
+    border-color: #A8BFE0;
     transform: translateX(-50%) scale(1.05);
 }
 
