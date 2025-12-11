@@ -2,7 +2,7 @@
 
 Веб‑приложение "CloseGame" разработано в рамках курсовой работы.  
 Цель проекта — создание полноценного интернет‑магазина цифровых игровых ключей с пользовательской и административной частью.  
-Приложение построено на **Laravel 10**, с использованием **PHP 8.1**, **PhpMyAdmin**, **CSS** и **JavaScript**.
+Приложение построено на **Laravel 10**, с использованием **PHP 8.1**, **MySQL**, **CSS** и **JavaScript**.
 
 ---
 
@@ -23,9 +23,8 @@
 |------------|-------------|
 | **Backend** | Laravel 10 (PHP 8.1 +) |
 | **Frontend** | Blade / CSS / JavaScript |
-| **База данных** | PhpMyAdmin |
+| **База данных** | MySQL / PgSQL |
 | **Фреймворк ORM** | Eloquent |
-| **Локальный сервер** | OpenServer |
 | **Система контроля версий** | Git / GitHub |
 
 ---
@@ -46,13 +45,15 @@ composer install
 ### 3️⃣ Настройка окружения
 ```bash
 cp .env.example .env
-```
+
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=closeGame
 DB_USERNAME=root
 DB_PASSWORD=
+```
+
 
 ### 4️⃣ Генерация ключа приложения
 ```bash
