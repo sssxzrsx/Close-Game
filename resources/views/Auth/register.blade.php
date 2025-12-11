@@ -11,6 +11,14 @@
     <div class="auth-box">
         <h2 class="auth-title">РЕГИСТРАЦИЯ</h2>
 
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                @foreach ($errors->all() as $error)
+                    {{ $error }}
+                @endforeach
+            </div>
+        @endif
+
         <form method="POST" action="{{ route('register') }}" class="auth-form">
             @csrf
             <input type="text" name="name" placeholder="Имя" required>

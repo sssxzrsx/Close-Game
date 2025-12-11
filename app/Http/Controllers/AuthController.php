@@ -16,12 +16,32 @@ class AuthController extends Controller
 
     public function register(Request $request)
     {
-        $validated = $request->validate([
-            'name' => 'required|string|max:255|unique:users',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
-            'accept_rules' => 'accepted',
-        ]);
+    $validated = $request->validate([
+        'name' => 'required|string|max:255|unique:users',
+        'email' => 'required|string|email|max:255|unique:users',
+        'password' => [
+            'required',
+            'string',
+            'min:6',
+            'regex:/^(?=.*[A-Za-z]).{6,}$/',
+            'confirmed'
+        ],
+        'accept_rules' => 'accepted',
+    ], [
+        'name.required' => 'Введите имя.',
+        'name.unique' => 'Пользователь с таким именем уже существует.',
+
+        'email.required' => 'Введите адрес электронной почты.',
+        'email.email' => 'Пожалуйста, введите корректный email.',
+        'email.unique' => 'Такой email уже зарегистрирован.',
+
+        'password.required' => 'Введите пароль.',
+        'password.min' => 'Пароль должен содержать минимум 6 символов.',
+        'password.regex' => 'Пароль должен содержать хотя бы одну латинскую букву (A–Z, a–z).',
+        'password.confirmed' => 'Пароли не совпадают.',
+
+        'accept_rules.accepted' => 'Необходимо согласие с правилами сайта.',
+    ]);
 
         $user = User::create([
             'name' => $validated['name'],
@@ -65,7 +85,7 @@ class AuthController extends Controller
         Auth::logout();
 
         $request->session()->invalidate();
-        
+
         $request->session()->regenerateToken();
 
         return redirect()->route('home')->with('success', 'Вы вышли из аккаунта.');
