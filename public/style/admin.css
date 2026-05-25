@@ -403,6 +403,768 @@
     display: block;
 }
 
+.status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.status-badge.active {
+    background: rgba(34, 197, 94, 0.15);
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.status-badge.banned {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.btn-unban {
+    background: transparent;
+    border: 1px solid #22c55e;
+    color: #22c55e;
+    border-radius: 6px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-unban:hover {
+    background: #22c55e;
+    color: #111;
+}
+
+tr[data-banned="1"] {
+    opacity: 0.8;
+    background: rgba(239, 68, 68, 0.05);
+}
+
+.users-filter {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-select {
+    background-color: #0d0d0d;
+    border: 1px solid #8DA8CF;
+    border-radius: 8px;
+    color: #fff;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.orders-filter,
+.users-filter {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-select,
+.filter-input {
+    background-color: #0d0d0d;
+    border: 1px solid #8DA8CF;
+    border-radius: 8px;
+    color: #fff;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+}
+
+.filter-input {
+    flex: 1;
+    min-width: 200px;
+}
+
+.orders-table-container,
+.users-table-container {
+    overflow-x: auto;
+}
+
+.admin-orders-table,
+.admin-users-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+.admin-orders-table th,
+.admin-users-table th {
+    text-align: left;
+    padding: 1rem 0.8rem;
+    color: #8DA8CF;
+    border-bottom: 2px solid #1f1f1f;
+    font-size: 0.85rem;
+}
+
+.admin-orders-table td,
+.admin-users-table td {
+    padding: 0.8rem;
+    border-bottom: 1px solid #1f1f1f;
+    vertical-align: middle;
+}
+
+.admin-orders-table tr:hover,
+.admin-users-table tr:hover {
+    background: rgba(141, 168, 207, 0.05);
+}
+
+.status-select {
+    background-color: #0d0d0d;
+    border: 1px solid #8DA8CF;
+    border-radius: 6px;
+    color: #fff;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.status-select option {
+    background-color: #0d0d0d;
+}
+
+.btn-view-order {
+    background: transparent;
+    border: 1px solid #8DA8CF;
+    color: #8DA8CF;
+    border-radius: 6px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-view-order:hover {
+    background: #8DA8CF;
+    color: #111;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.status-badge.active {
+    background: rgba(34, 197, 94, 0.15);
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.status-badge.banned {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.role-badge {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.role-badge.admin {
+    background: rgba(141, 168, 207, 0.2);
+    color: #8DA8CF;
+    border: 1px solid #8DA8CF;
+}
+
+.role-badge.user {
+    background: rgba(100, 100, 100, 0.2);
+    color: #aaa;
+    border: 1px solid #555;
+}
+
+.protected-badge {
+    color: #888;
+    font-size: 0.7rem;
+}
+
+.btn-ban {
+    background: transparent;
+    border: 1px solid #ff4d4d;
+    color: #ff4d4d;
+    border-radius: 6px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-ban:hover {
+    background: #ff4d4d;
+    color: #111;
+}
+
+.btn-unban {
+    background: transparent;
+    border: 1px solid #22c55e;
+    color: #22c55e;
+    border-radius: 6px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-unban:hover {
+    background: #22c55e;
+    color: #111;
+}
+
+.inline-form {
+    display: inline;
+}
+
+tr[data-banned="1"] {
+    opacity: 0.8;
+    background: rgba(239, 68, 68, 0.05);
+}
+
+.order-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.order-modal-content {
+    background: #111;
+    border: 1px solid #8DA8CF;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.order-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+.order-modal-header h3 {
+    color: #8DA8CF;
+    margin: 0;
+}
+
+.order-modal-close {
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #888;
+    transition: color 0.3s;
+}
+
+.order-modal-close:hover {
+    color: #ff4d4d;
+}
+
+.order-modal-body {
+    padding: 1.5rem;
+}
+
+.order-detail-info p {
+    margin-bottom: 0.5rem;
+    color: #ccc;
+}
+
+.order-detail-info strong {
+    color: #8DA8CF;
+}
+
+.order-detail-info .status-badge {
+    display: inline-block;
+    margin-left: 0.5rem;
+}
+
+.order-total {
+    color: #8DA8CF;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.order-detail-items {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #1f1f1f;
+}
+
+.order-detail-items h4 {
+    color: #8DA8CF;
+    margin-bottom: 1rem;
+}
+
+.order-detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.item-title {
+    flex: 2;
+}
+
+.item-price {
+    flex: 1;
+    color: #888;
+}
+
+.item-sum {
+    flex: 1;
+    text-align: right;
+    color: #8DA8CF;
+}
+
+@media (max-width: 768px) {
+    .orders-filter,
+    .users-filter {
+        flex-direction: column;
+    }
+    
+    .filter-select,
+    .filter-input {
+        width: 100%;
+    }
+    
+    .order-detail-item {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+    
+    .item-sum {
+        text-align: left;
+    }
+    
+    .admin-orders-table th,
+    .admin-users-table th,
+    .admin-orders-table td,
+    .admin-users-table td {
+        padding: 0.5rem;
+        font-size: 0.75rem;
+    }
+    
+    .status-select {
+        padding: 0.2rem 0.4rem;
+        font-size: 0.7rem;
+    }
+    
+    .btn-ban,
+    .btn-unban,
+    .btn-view-order {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.65rem;
+    }
+}
+
+.pagination-wrapper {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.pagination {
+    display: inline-flex;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pagination li a,
+.pagination li span {
+    background-color: #111;
+    color: #8DA8CF;
+    border: 1px solid #8DA8CF;
+    border-radius: 6px;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.pagination li a:hover {
+    background-color: #8DA8CF;
+    color: #111;
+}
+
+.pagination li.active span {
+    background-color: #8DA8CF;
+    color: #111;
+    cursor: default;
+}
+
+.pagination li.disabled span {
+    background-color: #222;
+    color: #555;
+    cursor: not-allowed;
+    border-color: #333;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.admin-section {
+    padding: 2rem 1rem;
+    overflow-x: hidden;
+}
+
+.admin-tabs {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: none;
+}
+
+.tab-link {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    background: #0d0d0d;
+    border-radius: 8px;
+    border-bottom: none;
+}
+
+.tab-link.active {
+    background: #8DA8CF;
+    color: #111;
+    border-color: #8DA8CF;
+}
+
+.admin-card {
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.admin-card h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.admin-form input[type="text"],
+.admin-form input[type="number"],
+.admin-form select,
+.admin-form textarea {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.orders-table-container,
+.users-table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -0.5rem;
+    padding: 0 0.5rem;
+}
+
+.admin-orders-table,
+.admin-users-table {
+    min-width: 700px;
+    font-size: 0.8rem;
+}
+
+.admin-orders-table th,
+.admin-users-table th,
+.admin-orders-table td,
+.admin-users-table td {
+    padding: 0.6rem 0.5rem;
+    white-space: nowrap;
+}
+
+.status-select {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.7rem;
+    min-width: 100px;
+}
+
+.btn-view-order,
+.btn-ban,
+.btn-unban {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.65rem;
+    white-space: nowrap;
+}
+
+.admin-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    padding: 0.8rem;
+}
+
+.admin-list li > div {
+    width: 100%;
+}
+
+.admin-game-item img {
+    width: 40px;
+    height: 55px;
+}
+
+.action-buttons {
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.ticket-block {
+    padding: 0.8rem;
+}
+
+.ticket-header {
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.ticket-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.ticket-user {
+    font-size: 0.9rem;
+}
+
+.ticket-email {
+    font-size: 0.7rem;
+}
+
+.ticket-date {
+    font-size: 0.7rem;
+}
+
+.ticket-message,
+.ticket-answer {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+}
+
+.orders-filter,
+.users-filter {
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.filter-select,
+.filter-input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.pagination {
+    gap: 0.3rem;
+    flex-wrap: wrap;
+}
+
+.pagination li a,
+.pagination li span {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.7rem;
+}
+
+.order-modal-content {
+    width: 95%;
+    margin: 1rem;
+}
+
+.order-modal-header h3 {
+    font-size: 1rem;
+}
+
+.order-detail-item {
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.5rem 0;
+}
+
+.item-sum {
+    text-align: left;
+}
+
+.alert-success,
+.alert-danger {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .admin-section {
+        padding: 2rem;
+    }
+    
+    .admin-card {
+        padding: 1.5rem;
+    }
+    
+    .admin-tabs {
+        flex-wrap: nowrap;
+        gap: 1rem;
+    }
+    
+    .tab-link {
+        padding: 0.8rem 1.2rem;
+        font-size: 1rem;
+        background: transparent;
+    }
+    
+    .tab-link.active {
+        background: transparent;
+        color: #8DA8CF;
+    }
+    
+    .orders-filter,
+    .users-filter {
+        flex-direction: row;
+    }
+    
+    .filter-select {
+        width: auto;
+        min-width: 180px;
+    }
+    
+    .filter-input {
+        flex: 1;
+    }
+    
+    .admin-list li {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .admin-list li > div {
+        width: auto;
+    }
+    
+    .action-buttons {
+        width: auto;
+    }
+    
+    .ticket-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .ticket-meta {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .order-detail-item {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .item-sum {
+        text-align: right;
+    }
+}
+
+@media (min-width: 1024px) {
+    .admin-section {
+        padding: 3rem 4rem;
+    }
+    
+    .admin-card {
+        padding: 2rem;
+    }
+    
+    .admin-orders-table,
+    .admin-users-table {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .admin-orders-table td,
+    .admin-users-table td {
+        white-space: normal;
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-section h1 {
+        font-size: 1.2rem;
+    }
+    
+    .admin-card h2 {
+        font-size: 1rem;
+    }
+    
+    .tab-link {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+    }
+    
+    .btn-admin,
+    .btn-delete,
+    .btn-edit {
+        width: 100%;
+        text-align: center;
+        margin-top: 0.25rem;
+    }
+    
+    .ticket-status-label {
+        font-size: 0.65rem;
+        padding: 0.2rem 0.5rem;
+    }
+}
+
+.status-select {
+    background-color: #0d0d0d;
+    border: 1px solid #8DA8CF;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.status-select option {
+    background-color: #0d0d0d;
+}
+
+.game-name span {
+    word-break: break-word;
+    white-space: normal;
+}
+
+.admin-orders-table td:last-child,
+.admin-users-table td:last-child {
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .admin-orders-table td:last-child,
+    .admin-users-table td:last-child {
+        white-space: normal;
+    }
+}
+
 @keyframes fade {
     from { opacity: 0; }
     to { opacity: 1; }

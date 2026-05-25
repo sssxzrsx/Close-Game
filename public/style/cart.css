@@ -76,44 +76,45 @@
     gap: 1rem;
 }
 
-.btn-pay {
-    display: inline-block;
-    background-color: #ffaa00;
-    color: #000 !important;
-    border: none;
-    border-radius: 8px;
-    padding: 0.6rem 1.6rem;
+.btn-pay,
+.btn-clear {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
     font-weight: 600;
     text-align: center;
-    text-decoration: none !important;
+    border-radius: 8px;
     cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.3s ease;
-    box-shadow: 0 0 6px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+    border: none;
+    box-sizing: border-box;
+    line-height: 1.2;
+    height: auto;
+}
+
+.btn-pay {
+    background-color: #ffaa00;
+    color: #000 !important;
+    text-decoration: none !important;
 }
 
 .btn-pay:hover {
     background-color: #ffc20f;
-    transform: scale(1.05);
-}
-
-.btn-pay:active {
-    transform: scale(0.98);
+    transform: scale(1.02);
+    color: #000 !important;
 }
 
 .btn-clear {
     background-color: #8DA8CF;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 0.6rem 1.6rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.2s, background-color 0.3s;
+    color: #fff !important;
 }
 
 .btn-clear:hover {
     background-color: #7b96c0;
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .cart-empty {

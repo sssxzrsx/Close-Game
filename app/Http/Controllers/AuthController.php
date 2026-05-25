@@ -52,7 +52,7 @@ class AuthController extends Controller
 
         Auth::login($user);
 
-        return redirect()->route('home')->with('success', 'Регистрация выполнена успешно!');
+        return redirect()->route('profile')->with('success', 'Регистрация выполнена успешно!');
     }
 
     public function showLoginForm()
@@ -72,7 +72,7 @@ class AuthController extends Controller
 
             return Auth::user()->is_admin
                 ? redirect()->route('admin.dashboard')->with('success', 'Добро пожаловать, администратор!')
-                : redirect()->route('home')->with('success', 'Добро пожаловать!');
+                : redirect()->route('profile')->with('success', 'Добро пожаловать!');
         }
 
         return back()->withErrors([

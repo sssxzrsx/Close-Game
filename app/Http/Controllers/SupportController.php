@@ -10,9 +10,9 @@ class SupportController extends Controller
 {
     public function index()
     {
-        $tickets = Ticket::where('user_id', operator: Auth::id())
-        ->latest()
-        ->get();
+        $tickets = Ticket::where('user_id', Auth::id())
+            ->latest()
+            ->get();
 
         return view('support.index', compact('tickets'));
     }
@@ -25,8 +25,8 @@ class SupportController extends Controller
 
         Ticket::create([
             'user_id' => Auth::id(),
-            'subject' => $request->subject,
             'message' => $request->message,
+            'status' => 'open',
         ]);
 
         return back()->with('success', 'Ваше обращение отправлено. Наш менеджер ответит в ближайшее время.');
@@ -35,8 +35,8 @@ class SupportController extends Controller
     public function adminIndex()
     {
         $tickets = Ticket::with('user')
-        ->latest()
-        ->get();
+            ->latest()
+            ->get();
 
         return view('admin.tickets', compact('tickets'));
     }
@@ -57,12 +57,12 @@ class SupportController extends Controller
 
     public function delete(Ticket $ticket)
     {
-    if (!$ticket->answer) 
-        return back()->with('error', 'Нельзя удалить обращение без ответа.');
-    
-
-    $ticket->delete();
-    
-    return back()->with('success', 'Обращение успешно удалено.');
+        if (!$ticket->answer) {
+            return back()->with('error', 'Нельзя удалить обращение без ответа.');
+        }
+        
+        $ticket->delete();
+        
+        return back()->with('success', 'Обращение успешно удалено.');
     }
 }

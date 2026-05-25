@@ -6,6 +6,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProfileController; 
 use App\Http\Controllers\SupportController;
 use Illuminate\Support\Facades\Route;
 
@@ -44,6 +45,15 @@ Route::prefix('admin')->middleware(['auth', 'can:admin'])->group(function () {
     ->name('admin.tickets.answer');
     Route::delete('/admin/tickets/{ticket}/delete', [SupportController::class, 'delete'])
     ->name('admin.tickets.delete');
+
+    Route::patch('/admin/orders/{order}/status', [AdminController::class, 'updateOrderStatus'])
+    ->name('admin.orders.update-status');
+    Route::get('/admin/orders/{order}/details', [AdminController::class, 'getOrderDetails'])
+    ->name('admin.orders.details');
+    Route::patch('/admin/users/{user}/ban', [AdminController::class, 'banUser'])
+    ->name('admin.users.ban');
+    Route::patch('/admin/users/{user}/unban', [AdminController::class, 'unbanUser'])
+    ->name('admin.users.unban');
 });
 
 
@@ -63,10 +73,15 @@ Route::middleware('auth')->group(function () {
     Route::post('/support/send', [SupportController::class, 'store'])
     ->name('support.send');
 
+    Route::post('/payment', [PaymentController::class, 'process'])
+    ->name('payment.process');
     Route::get('/payment', [PaymentController::class, 'show'])
     ->name('payment.show');
     Route::post('/payment/process', [PaymentController::class, 'process'])
     ->name('payment.process');
+
+    Route::get('/profile', [ProfileController::class, 'index'])
+    ->name('profile');
 
     Route::post('/logout', [AuthController::class, 'logout'])
     ->name('logout');
@@ -90,6 +105,12 @@ Route::middleware('guest')->group( function() {
 
 Route::group([], function() {
 
+    Route::get('/catalog', [ProductController::class, 'index'])
+    ->name('catalog');
+    Route::get('/catalog/{game}', [ProductController::class, 'show'])
+    ->name('catalog.show');
+    Route::get('/catalog/filter', [ProductController::class, 'filter'])
+    ->name('catalog.filter');
     Route::get('/catalog', [ProductController::class, 'index'])
     ->name('catalog');
     Route::get('/catalog/{game}', [ProductController::class, 'show'])

@@ -2,33 +2,37 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
-use App\Models\Game;
 use Illuminate\Http\Request;
+use App\Models\Game;
+use App\Models\Category;
 
 class ProductController extends Controller
 {
     public function index(Request $request)
     {
-        $categories = Category::orderBy('name')->get();
-
-        $query = Game::query()->with('category');
-
-        if ($request->filled('category') && $request->category !== 'all') {
+        $query = Game::with('category');
+        
+        if ($request->category && $request->category !== 'all') {
             $query->where('category_id', $request->category);
         }
-
-        $games = $query->get();
-
+        
+        if ($request->search) {
+            $query->where('title', 'like', '%' . $request->search . '%');
+        }
+        
+        $games = $query->orderBy('id', 'desc')->paginate(12);
+        $categories = Category::all();
+        
         return view('catalog.index', compact('games', 'categories'));
     }
+    
     public function show(Game $game)
     {
         $related = Game::where('category_id', $game->category_id)
             ->where('id', '!=', $game->id)
-            ->take(4)
+            ->limit(4)
             ->get();
-
+        
         return view('catalog.show', compact('game', 'related'));
     }
 }

@@ -27,4 +27,21 @@ class Game extends Model
     {
         return $this->discount_price ?? $this->price;
     }
+
+    public function getImageUrlAttribute()
+{
+    if (!$this->image) {
+        return null;
+    }
+    
+    if (filter_var($this->image, FILTER_VALIDATE_URL)) {
+        return $this->image;
+    }
+    
+    if (str_starts_with($this->image, 'storage/') || str_starts_with($this->image, '/storage/')) {
+        return asset($this->image);
+    }
+    
+    return asset('storage/' . $this->image);
+}
 }

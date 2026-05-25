@@ -32,7 +32,7 @@
                 <a href="{{ route('login.form') }}" class="btn-auth">ВХОД | РЕГИСТРАЦИЯ</a>
             @else
                 <div class="user-info">
-                    <span class="user-name">{{ Auth::user()->name }}</span>
+                    <span class="user-name"><a href="{{ route('profile') }}">{{ Auth::user()->name }}</a></span>
 
                     <form action="{{ route('logout') }}" method="POST" class="logout-form">
                         @csrf

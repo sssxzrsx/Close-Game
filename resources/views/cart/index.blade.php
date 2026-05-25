@@ -3,7 +3,7 @@
 @section('title', 'Корзина')
 
 @push('style')
-<link rel="stylesheet" href="{{ asset('style/cart.css') }}">
+    <link rel="stylesheet" href="{{ asset('style/cart.css') }}">
 @endpush
 
 @section('content')
@@ -44,7 +44,7 @@
         <div class="cart-footer">
             <div class="cart-total">Итого: <strong>{{ $total }}₽</strong></div>
             <div class="cart-actions">
-                <a href="{{ route('payment.show') }}" class="btn-pay">ОПЛАТИТЬ</a>
+                <a href="{{ route('payment.show') }}" class="btn-pay">Перейти к оплате</a>
                 <form action="{{ route('cart.clear') }}" method="POST">
                     @csrf
                     @method('DELETE')
